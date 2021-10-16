@@ -7,7 +7,7 @@ const Hero = (): JSX.Element => {
     <>
       <div className="flex flex-col-reverse lg:flex-row ">
         <img
-          src="/home/self.png"
+          src="home/self.png"
           alt=""
           className="opacity-70 pointer-events-none h-auto w-11/12 sm:w-8/12 lg:w-48% mt-auto"
         />
