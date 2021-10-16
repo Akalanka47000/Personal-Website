@@ -5,4 +5,7 @@ module.exports = {
     PROJECT_ROOT: __dirname,
   },
   basePath: '/portfolio',
+  images: {
+    path: "/portfolio/_next/image",
+  },
 }
