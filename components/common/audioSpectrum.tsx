@@ -9,15 +9,16 @@ const Spectrum = (): JSX.Element => {
     audio.loop = true
     document.body.appendChild(audio)
     document.body.addEventListener('mouseover', () => {
-      console.log("dsfsdf")
       if (!playing) {
-        try {
-          audio.play()
-          audio.volume = 0.035
-          playing = true
-        } catch(e) {
-          console.log('autoplay disabled in chrome')
-        }
+        audio.volume = 0.025
+        audio
+          .play()
+          .then(() => {
+            playing = true
+          })
+          .catch(() => {
+            console.log('autoplay disabled in chrome')
+          })
       }
     })
   }
