@@ -7,7 +7,7 @@ const Spectrum = (): JSX.Element => {
   const [audioLoaded, setAudioLoaded] = useState(false)
 
   useEffect(() => {
-    setAudio(new Audio('portfolio/audio/music.mp3') as HTMLAudioElement)
+    setAudio(new Audio('/portfolio/audio/music.mp3') as HTMLAudioElement)
     setMuted(false)
     setAudioLoaded(true)
     if (audio) {
