@@ -12,6 +12,7 @@ const Spectrum = (): JSX.Element => {
         .play()
         .then(
           () => {
+            audio.muted=false
             const button = document.getElementById(
               'dummyBtn'
             ) as HTMLButtonElement
@@ -36,7 +37,7 @@ const Spectrum = (): JSX.Element => {
         className="h-screen w-screen fixed top-0 left-0 z-50 cursor-default"
         onMouseMove={playAudio}
       ></button>
-      <audio id="audio-element" src="/portfolio/audio/music.mp3" loop></audio>
+      <audio id="audio-element" src="/portfolio/audio/music.mp3" muted loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
