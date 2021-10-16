@@ -16,7 +16,6 @@ const Spectrum = (): JSX.Element => {
               'dummyBtn'
             ) as HTMLButtonElement
             button.style.display = 'none'
-            setHovered(false)
           },
           () => {
             console.log('promise rejected')
@@ -35,9 +34,9 @@ const Spectrum = (): JSX.Element => {
       <button
         id="dummyBtn"
         className="h-screen w-screen fixed top-0 left-0 z-50 cursor-default"
-        onMouseOver={playAudio}
+        onMouseMove={playAudio}
       ></button>
-      <audio id="audio-element" src="/portfolio//audio/music.mp3" loop></audio>
+      <audio id="audio-element" src="/portfolio/audio/music.mp3" loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"

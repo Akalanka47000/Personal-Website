@@ -14,7 +14,7 @@ const Hero = (): JSX.Element => {
         <div className="flex flex-col justify-center items-end lg:items-start text-right lg:text-left mt-24 mb-12 lg:mt-0 lg:mb-0 mx-12 md:mx-32">
           <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white cursor-default transition ease-in">
             Hi, I&apos;m{' '}
-            <span className="text-orange-dark">Akalanka Perera</span>
+            <span className="text-orange-dark blink">Akalanka Perera</span>
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-orange-dark mt-6 cursor-default transition ease-in">
             I&apos;m a 19 year old software engineering undergraduate from Sri
