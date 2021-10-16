@@ -5,6 +5,13 @@ const Spectrum = (): JSX.Element => {
   const [played, setPlayed] = useState(false)
   useEffect(() => {
     setTimeout(() => {
+      const iframe = document.createElement('iframe')
+      iframe.setAttribute('src', '/portfolio/audio/silence.mp3')
+      iframe.style.height = '0px'
+      iframe.style.width = '0px'
+      iframe.allow = 'autoplay'
+      iframe.style.display = 'none'
+      document.body.appendChild(iframe)
       if (process.browser && !played) {
         document.addEventListener('mousemove', playAudio)
       }
