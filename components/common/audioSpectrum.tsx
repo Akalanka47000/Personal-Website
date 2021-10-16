@@ -11,21 +11,8 @@ const Spectrum = (): JSX.Element => {
   
   const playAudio = () => {
     const audio = document.getElementById('audio-element') as HTMLAudioElement
-    audio.muted = true
     audio
       .play()
-      .then(
-        () => {
-          audio.muted = false
-          audio.volume = 0.05
-        },
-        () => {
-          console.log('promise rejected')
-        }
-      )
-      .catch(() => {
-        console.log('autoplay disabled in chrome')
-      })
   }
 
   return (
@@ -34,8 +21,6 @@ const Spectrum = (): JSX.Element => {
         <audio
           id="audio-element"
           src="/portfolio/audio/music.mp3"
-          autoPlay={false}
-          muted
           loop
         ></audio>
       </button>
