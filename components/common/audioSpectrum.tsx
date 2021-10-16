@@ -8,7 +8,8 @@ const Spectrum = (): JSX.Element => {
     audio.src = '/portfolio//audio/music.mp3'
     audio.loop = true
     document.body.appendChild(audio)
-    document.body.addEventListener('mousemove', () => {
+    document.body.addEventListener('mouseover', () => {
+      console.log("dsfsdf")
       if (!playing) {
         try {
           audio.play()
