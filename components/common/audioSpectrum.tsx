@@ -11,7 +11,7 @@ const Spectrum = (): JSX.Element => {
     })
   }
   return (
-    <div>
+    <body>
       <audio id="audio-element" src="/portfolio//audio/music.mp3" loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
@@ -38,7 +38,7 @@ const Spectrum = (): JSX.Element => {
           gap={8}
         />
       </div>
-    </div>
+    </body>
   )
 }
 
