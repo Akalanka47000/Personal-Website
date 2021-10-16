@@ -15,6 +15,10 @@ module.exports = {
       },
       width: {
         13: '3.25rem',
+        '17vw': '17vw',
+        '20vw': '20vw',
+        '40vw': '40vw',
+        '45vw': '45vw',
         '50vw': '50vw',
         '48%': '48%',
       },
@@ -23,6 +27,9 @@ module.exports = {
         13: '3.25rem',
         '50vh': '90vh',
         '100vh-16': 'calc(100vh - 60px)',
+        '17vw': '17vw',
+        '20vw': '20vw',
+        '40vw': '40vw',
       },
       boxShadow: {
         red: '0px 0px 7px rgba(255, 64, 0, 0.9)',
