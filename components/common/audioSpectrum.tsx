@@ -1,23 +1,19 @@
 import { useEffect } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
 
-
 const Spectrum = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
-      eventFire(document.getElementById('dummyBtn'), 'click')
+      if (process.browser) {
+        var ifrm = document.createElement("iframe")
+        ifrm.setAttribute("src", "/portfolio/audio/silence.mp3")
+        ifrm.allow='autoplay'
+        ifrm.style.display = "none"
+        document.body.appendChild(ifrm)
+        playAudio()
+      }
     }, 4000)
   }, [])
-
-  function eventFire(el:any, etype:any) {
-    if (el.fireEvent) {
-      el.fireEvent('on' + etype)
-    } else {
-      var evObj = document.createEvent('Events')
-      evObj.initEvent(etype, true, false)
-      el.dispatchEvent(evObj)
-    }
-  }
 
   const playAudio = () => {
     const audio = document.getElementById('audio-element') as HTMLAudioElement
@@ -40,20 +36,17 @@ const Spectrum = (): JSX.Element => {
 
   return (
     <div>
-      <iframe src="/portfolio/audio/silence.mp3" allow="autoplay" id="audio" className="hidden"></iframe>
+      <audio
+        id="audio-element"
+        src="/portfolio/audio/music.mp3"
+        autoPlay={false}
+        muted
+        loop
+      ></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
       >
-        <button id="dummyBtn" onClick={playAudio}>
-          <audio
-            id="audio-element"
-            src="/portfolio/audio/music.mp3"
-            autoPlay={false}
-            muted
-            loop
-          ></audio>
-        </button>
         <AudioSpectrum
           id="audio-canvas"
           height={150}
