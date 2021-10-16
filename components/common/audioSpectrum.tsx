@@ -1,17 +1,26 @@
 import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
+  let playing = false
   if (process.browser) {
     const audio = document.createElement('AUDIO') as HTMLAudioElement
-    audio.id="audio-element"
+    audio.id = 'audio-element'
     audio.src = '/portfolio//audio/music.mp3'
     audio.loop = true
     document.body.appendChild(audio)
-    document.body.addEventListener('mousemove', function () {
-      audio.volume = 0.1
-      audio.play()
+    document.body.addEventListener('mousemove', () => {
+      if (!playing) {
+        try {
+          audio.play()
+          audio.volume = 0.035
+          playing = true
+        } catch(e) {
+          console.log('autoplay disabled in chrome')
+        }
+      }
     })
   }
+
   return (
     <div>
       <div
