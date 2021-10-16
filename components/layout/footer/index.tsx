@@ -12,7 +12,7 @@ const Footer = (): JSX.Element => {
         <div className=" flex flex-col justify-center items-center rounded-full bg-black-normal shadow-black-blur py-4 px-12 ">
           <div className="flex row justify-center items-center">
             <Link href="https://www.linkedin.com/in/akalanka-perera-50899a1b3/">
-              <a>
+              <a  target="_blank">
                 <AiFillLinkedin
                   size={38}
                   className="mr-2 fill-current-color text-white hover:text-orange-dark transition ease-in"
@@ -20,7 +20,7 @@ const Footer = (): JSX.Element => {
               </a>
             </Link>
             <Link href="https://github.com/Akalanka47000">
-              <a>
+              <a  target="_blank">
                 <FaGithubSquare
                   size={34}
                   className="fill-current-color text-white hover:text-orange-dark transition ease-in"
@@ -28,7 +28,7 @@ const Footer = (): JSX.Element => {
               </a>
             </Link>
             <Link href="https://www.hackerrank.com/IT21072642">
-              <a>
+              <a  target="_blank">
                 <SiHackerrank
                   size={29}
                   className="ml-3 fill-current-color text-white hover:text-orange-dark transition ease-in"

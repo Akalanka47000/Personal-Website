@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { HiMenuAlt2 } from 'react-icons/hi'
+import { DiGithubAlt } from 'react-icons/di'
 import NavbarLogo from './logo'
 
 const Navbar = (): JSX.Element => {
@@ -34,15 +35,15 @@ const Navbar = (): JSX.Element => {
     <header className="flex flex-row w-full h-16 justify-between items-center shadow-red hover:shadow-red-thicker z-20 bg-black-see-through transition duration-500 ease">
       <div className="flex justify-between items-center">
         <div className="flex flex-row items-center">
-          <div className="w-11 h-11 ml-2 flex items-center">
+          <div className="w-11 h-11 ml-4 flex items-center">
             <Link href="/">
               <a>
-                <NavbarLogo/>
+                <NavbarLogo />
               </a>
             </Link>
           </div>
           <div className="font-medium text-xl text-white hover:text-orange-dark ml-4 cursor-default transition ease-in">
-            Akalanka Perera
+            Portfolio
           </div>
         </div>
 
@@ -56,7 +57,7 @@ const Navbar = (): JSX.Element => {
                     selectedNavIndex == index
                       ? 'text-orange-dark'
                       : 'text-white'
-                  } hover:text-orange-dark transform hover:scale-105 transition ease-in mx-3`}
+                  } hover:text-orange-dark transition ease-in mx-3`}
                   onClick={setSelectedNavIndex.bind(this, index)}
                 >
                   <Link href={menuItem.path}>
@@ -65,6 +66,11 @@ const Navbar = (): JSX.Element => {
                 </div>
               )
             })}
+            <Link href="https://github.com/Akalanka47000/Personal-Website">
+              <a target="_blank">
+                <DiGithubAlt size={35} className="fill-current-color text-white hover:text-orange-dark transition ease-in ml-2"/>
+              </a>
+            </Link>
             <li
               className="block lg:hidden z-20 cursor-pointer transition ease-in"
               onClick={toggleNav}
