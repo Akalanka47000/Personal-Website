@@ -31,7 +31,7 @@ const Navbar = (): JSX.Element => {
   ]
 
   return (
-    <header className="sticky top-0 flex flex-row w-full h-16 justify-between items-center shadow-red hover:shadow-red-thicker z-20 bg-black transition duration-500 ease">
+    <header className="flex flex-row w-full h-16 justify-between items-center shadow-red hover:shadow-red-thicker z-20 bg-black-see-through transition duration-500 ease">
       <div className="flex justify-between items-center">
         <div className="flex flex-row items-center">
           <div className="w-11 h-11 ml-2 flex items-center">

@@ -1,13 +1,19 @@
 import type { NextPage } from 'next'
 import Background from '../components/common/background'
 import Layout from '../components/layout'
-import Navbar from '../components/layout/Navbar'
+import Container from '../components/layout/container'
+import Footer from '../components/layout/footer/footer'
+import Navbar from '../components/layout/navbar/navbar'
 
 const Home: NextPage = () => {
   return (
     <Layout title="Akalanka Perera | Home">
       <Background />
-      <Navbar />
+      <Container>
+        <Navbar />
+        <div className="w-screen h-screen"></div>
+        <Footer />
+      </Container>
     </Layout>
   )
 }

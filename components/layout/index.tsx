@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Spectrum from '../common/audioSpectrum'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -25,7 +24,6 @@ const Layout = ({ children, title }: LayoutProps): JSX.Element => {
       </Head>
       <main className="bg-bgWhite text-textBlack font-roboto min-h-screen overflow-x-hidden">
         {children}
-        <Spectrum />
       </main>
     </>
   )
