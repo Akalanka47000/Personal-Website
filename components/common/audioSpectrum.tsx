@@ -5,7 +5,7 @@ import $ from "jquery"
 const Spectrum = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
-      $('#dummyBtn').trigger("click")
+      $('#dummyBtn').click()
     }, 4000)
   }, [])
   
