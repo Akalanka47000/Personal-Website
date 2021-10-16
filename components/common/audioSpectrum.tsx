@@ -15,7 +15,7 @@ const Spectrum = (): JSX.Element => {
   }
   return (
     <div>
-      <audio id="audio-element" src="audio/music.mp3" muted loop></audio>
+      <audio id="audio-element" src="audio/music.mp3" autoPlay muted loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
