@@ -7,6 +7,10 @@ const Spectrum = (): JSX.Element => {
     if (!hovered) {
       setHovered(true)
       const audio = document.getElementById('audio-element') as HTMLAudioElement
+      const button = document.getElementById(
+        'dummyBtn'
+      ) as HTMLButtonElement
+      button.click()
       audio.muted=true
       audio
         .play()
@@ -14,12 +18,10 @@ const Spectrum = (): JSX.Element => {
           () => {
             audio.muted=false
             audio.volume = 0.05
-            const button = document.getElementById(
-              'dummyBtn'
-            ) as HTMLButtonElement
             button.style.display = 'none'
           },
           () => {
+            console.log('abc')
             console.log('promise rejected')
             setHovered(false)
           }
