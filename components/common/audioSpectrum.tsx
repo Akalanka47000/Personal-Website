@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
@@ -7,24 +6,26 @@ const Spectrum = (): JSX.Element => {
       const audioElement = document.getElementById(
         'audio-element'
       ) as HTMLAudioElement
-
-      console.log('hello3')
       if (audioElement) {
-        console.log('hello')
         audioElement.volume = 0.1
         audioElement.play()
+        audioElement.style.height = '0px'
+        audioElement.style.width = '0px'
       }
     }
   }
 
   return (
     <div>
-      <button
-        id="playerButton"
+      <audio
+        id="audio-element"
+        src="/portfolio//audio/music.mp3"
+        muted={false}
+        loop
+        controls
         className="h-screen w-screen bg-white fixed left-0 top-0 z-50 opacity-0"
         onMouseOver={playAudio}
-      ></button>
-      <audio id="audio-element" src="/portfolio//audio/music.mp3" muted={false} loop></audio>
+      ></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
