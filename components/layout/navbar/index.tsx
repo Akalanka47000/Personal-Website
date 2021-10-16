@@ -76,7 +76,7 @@ const Navbar = (): JSX.Element => {
               onClick={toggleNav}
             >
               {!isOpen ? (
-                <HiMenuAlt2 className="h-6 w-6 text-white hover:text-orange-dark transition ease-in" />
+                <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-orange-dark transition ease-in" />
               ) : (
                 ''
               )}
