@@ -5,12 +5,7 @@ const Spectrum = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       if (process.browser) {
-        var ifrm = document.createElement("iframe")
-        ifrm.setAttribute("src", "/portfolio/audio/silence.mp3")
-        ifrm.allow='autoplay'
-        ifrm.style.display = "none"
-        document.body.appendChild(ifrm)
-        playAudio()
+        document.addEventListener('click', playAudio)
       }
     }, 4000)
   }, [])
@@ -36,17 +31,17 @@ const Spectrum = (): JSX.Element => {
 
   return (
     <div>
-      <audio
-        id="audio-element"
-        src="/portfolio/audio/music.mp3"
-        autoPlay={false}
-        muted
-        loop
-      ></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
       >
+        <audio
+          id="audio-element"
+          src="/portfolio/audio/music.mp3"
+          autoPlay={false}
+          muted
+          loop
+        ></audio>
         <AudioSpectrum
           id="audio-canvas"
           height={150}
