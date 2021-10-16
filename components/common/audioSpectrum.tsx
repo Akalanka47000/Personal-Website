@@ -1,46 +1,44 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
-  const [hovered, setHovered] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+      const audio = document.getElementById('dummyBtn') as HTMLButtonElement
+      audio.click()
+    }, 4000)
+  }, [])
+  
   const playAudio = () => {
-    if (!hovered) {
-      setHovered(true)
-      const audio = document.getElementById('audio-element') as HTMLAudioElement
-      const button = document.getElementById(
-        'dummyBtn'
-      ) as HTMLButtonElement
-      button.click()
-      audio.muted=true
-      audio
-        .play()
-        .then(
-          () => {
-            audio.muted=false
-            audio.volume = 0.05
-            button.style.display = 'none'
-          },
-          () => {
-            console.log('abc')
-            console.log('promise rejected')
-            setHovered(false)
-          }
-        )
-        .catch(() => {
-          console.log('autoplay disabled in chrome')
-          setHovered(false)
-        })
-    }
+    const audio = document.getElementById('audio-element') as HTMLAudioElement
+    audio.muted = true
+    audio
+      .play()
+      .then(
+        () => {
+          audio.muted = false
+          audio.volume = 0.05
+        },
+        () => {
+          console.log('promise rejected')
+        }
+      )
+      .catch(() => {
+        console.log('autoplay disabled in chrome')
+      })
   }
 
   return (
     <div>
-      <button
-        id="dummyBtn"
-        className="h-screen w-screen fixed top-0 left-0 z-50 cursor-default"
-        onMouseMove={playAudio}
-      ></button>
-      <audio id="audio-element" src="/portfolio/audio/music.mp3" autoPlay={false} muted loop></audio>
+      <button id="dummyBtn" onClick={playAudio}>
+        <audio
+          id="audio-element"
+          src="/portfolio/audio/music.mp3"
+          autoPlay={false}
+          muted
+          loop
+        ></audio>
+      </button>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
