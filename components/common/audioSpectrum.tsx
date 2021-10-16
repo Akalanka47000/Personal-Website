@@ -8,6 +8,9 @@ const Spectrum = (): JSX.Element => {
       ) as HTMLAudioElement
       if (audioElement) {
         audioElement.volume = 0.1
+        audioElement.muted = true
+        audioElement.play()
+        audioElement.pause()
         audioElement.muted = false
         audioElement.play()
       }
