@@ -1,26 +1,20 @@
+import { useState } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
+  const [muted, setMuted] = useState(true)
   if (process.browser) {
-    setTimeout(() => {
-      const audioElement = document.getElementById(
-        'audio-element'
-      ) as HTMLAudioElement
-      if (audioElement) {
-        audioElement.volume = 0.1
-        audioElement.muted = false
-      }
-    }, 3000)
+    const audioElement = document.getElementById(
+      'audio-element'
+    ) as HTMLAudioElement
+    if (audioElement) {
+      audioElement.volume = 0.1
+     setMuted(false)
+    }
   }
   return (
     <div>
-      <audio
-        id="audio-element"
-        src="audio/music.mp3"
-        autoPlay
-        muted
-        loop
-      ></audio>
+      <audio id="audio-element" src="audio/music.mp3" autoPlay muted={muted} loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
