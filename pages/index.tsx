@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Background from '../components/common/background'
 import Layout from '../components/layout'
 import Container from '../components/layout/container'
-import Footer from '../components/layout/footer/footer'
-import Navbar from '../components/layout/navbar/navbar'
+import Footer from '../components/layout/footer'
+import Navbar from '../components/layout/navbar'
 
 const Home: NextPage = () => {
   return (

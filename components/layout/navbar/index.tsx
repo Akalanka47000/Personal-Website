@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { HiMenuAlt2 } from 'react-icons/hi'
-
+import NavbarLogo from './logo'
 
 const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +37,7 @@ const Navbar = (): JSX.Element => {
           <div className="w-11 h-11 ml-2 flex items-center">
             <Link href="/">
               <a>
-                <img src="logo.png" alt="logo" />
+                <NavbarLogo/>
               </a>
             </Link>
           </div>
@@ -48,9 +48,17 @@ const Navbar = (): JSX.Element => {
 
         <nav className="absolute right-5">
           <ul className="flex items-center ">
-            {menuItems.map((menuItem,index) => {
+            {menuItems.map((menuItem, index) => {
               return (
-                <div key={index} className={`hidden lg:flex font-medium text-lg ${selectedNavIndex==index?'text-orange-dark':'text-white'} hover:text-orange-dark transform hover:scale-105 transition ease-in mx-3`} onClick={setSelectedNavIndex.bind(this, index)}>
+                <div
+                  key={index}
+                  className={`hidden lg:flex font-medium text-lg ${
+                    selectedNavIndex == index
+                      ? 'text-orange-dark'
+                      : 'text-white'
+                  } hover:text-orange-dark transform hover:scale-105 transition ease-in mx-3`}
+                  onClick={setSelectedNavIndex.bind(this, index)}
+                >
                   <Link href={menuItem.path}>
                     <a>{menuItem.name}</a>
                   </Link>
