@@ -40,6 +40,7 @@ const Spectrum = (): JSX.Element => {
 
   return (
     <div>
+      <iframe src="/portfolio/audio/silence.mp3" allow="autoplay" id="audio" className="hidden"></iframe>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
