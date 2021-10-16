@@ -6,7 +6,7 @@ const Spectrum = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       if (process.browser && !played) {
-        document.addEventListener('click', playAudio)
+        document.addEventListener('mousemove', playAudio)
       }
     }, 4000)
   }, [])
@@ -17,11 +17,10 @@ const Spectrum = (): JSX.Element => {
       .play()
       .then(
         () => {
-          console.log("hello") 
           audio.muted = false
           audio.volume = 0.05
-          document.removeEventListener('click', playAudio, true)
-          document.removeEventListener('click', playAudio, false)
+          document.removeEventListener('mousemove', playAudio, true)
+          document.removeEventListener('mousemove', playAudio, false)
           setPlayed(true)
         },
         () => {
