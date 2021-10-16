@@ -2,17 +2,20 @@ import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
   if (process.browser) {
-    const audioElement = document.getElementById(
-      'audio-element'
-    ) as HTMLAudioElement
-    if (audioElement) {
-      audioElement.volume = 0.1
-      audioElement.play()
-    }
+    setTimeout(() => {
+      const audioElement = document.getElementById(
+        'audio-element'
+      ) as HTMLAudioElement
+      if (audioElement) {
+        audioElement.volume = 0.1
+        audioElement.muted = false
+        audioElement.play()
+      }
+    }, 3000)
   }
   return (
     <div>
-      <audio id="audio-element" src="audio/music.mp3" loop></audio>
+      <audio id="audio-element" src="audio/music.mp3" muted loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
