@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
-import $ from 'jquery'
+
 
 const Spectrum = (): JSX.Element => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const Spectrum = (): JSX.Element => {
     }, 4000)
   }, [])
 
-  function eventFire(el, etype) {
+  function eventFire(el:any, etype:any) {
     if (el.fireEvent) {
       el.fireEvent('on' + etype)
     } else {
