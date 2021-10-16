@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
 
 const Spectrum = (): JSX.Element => {
+  const [played, setPlayed] = useState(false)
   useEffect(() => {
     setTimeout(() => {
-      if (process.browser) {
+      if (process.browser && !played) {
         document.addEventListener('click', playAudio)
       }
     }, 4000)
@@ -12,13 +13,16 @@ const Spectrum = (): JSX.Element => {
 
   const playAudio = () => {
     const audio = document.getElementById('audio-element') as HTMLAudioElement
-    audio.muted = true
     audio
       .play()
       .then(
         () => {
+          console.log("hello") 
           audio.muted = false
           audio.volume = 0.05
+          document.removeEventListener('click', playAudio, true)
+          document.removeEventListener('click', playAudio, false)
+          setPlayed(true)
         },
         () => {
           console.log('promise rejected')
