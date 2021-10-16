@@ -11,7 +11,7 @@ const Hero = (): JSX.Element => {
           alt=""
           className="opacity-70 pointer-events-none h-auto w-11/12 sm:w-8/12 lg:w-48% mt-auto"
         />
-        <div className="flex flex-col justify-center items-end lg:items-start text-right lg:text-left mt-24 mb-12 lg:mt-0 lg:mb-0 mx-12 md:mx-32">
+        <div className="flex flex-col justify-center items-end lg:items-start text-right lg:text-left mt-20 mb-12 lg:mt-0 lg:mb-0 mx-12 md:mx-32">
           <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white cursor-default transition ease-in">
             Hi, I&apos;m{' '}
             <span className="text-orange-dark blink">Akalanka Perera</span>
