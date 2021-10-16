@@ -1,33 +1,49 @@
 import { useEffect } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
+import $ from "jquery"
 
 const Spectrum = (): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
-      const audio = document.getElementById('dummyBtn') as HTMLButtonElement
-      audio.click()
+      $('#dummyBtn').trigger("click")
     }, 4000)
   }, [])
   
   const playAudio = () => {
     const audio = document.getElementById('audio-element') as HTMLAudioElement
+    audio.muted = true
     audio
       .play()
+      .then(
+        () => {
+          audio.muted = false
+          audio.volume = 0.05
+        },
+        () => {
+          console.log('promise rejected')
+        }
+      )
+      .catch(() => {
+        console.log('autoplay disabled in chrome')
+      })
   }
 
   return (
     <div>
-      <button id="dummyBtn" onClick={playAudio}>
-        <audio
-          id="audio-element"
-          src="/portfolio/audio/music.mp3"
-          loop
-        ></audio>
-      </button>
+      
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
       >
+        <button id="dummyBtn" onClick={playAudio}>
+        <audio
+          id="audio-element"
+          src="/portfolio/audio/music.mp3"
+          autoPlay={false}
+          muted
+          loop
+        ></audio>
+      </button>
         <AudioSpectrum
           id="audio-canvas"
           height={150}
