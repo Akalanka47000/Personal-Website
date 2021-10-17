@@ -14,7 +14,9 @@ module.exports = {
         },
         orange: {
           dark: '#ff4000',
+          light: '#f8981d',
         },
+        yellow:'#fda612',
       },
       width: {
         13: '3.25rem',
