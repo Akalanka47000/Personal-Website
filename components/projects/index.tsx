@@ -50,7 +50,7 @@ const ProjectCarousel = (): JSX.Element => {
           showStatus={false}
           showIndicators={false}
           autoPlay={true}
-          interval={5000}
+          interval={4000}
           transitionTime={1000}
           infiniteLoop={true}
           emulateTouch={true}
