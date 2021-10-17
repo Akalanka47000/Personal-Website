@@ -22,7 +22,7 @@ const Project = ({ project }: props): JSX.Element => {
         <div className="w-full flex flex-row flex-wrap gap-x-4 justify-center md:justify-start items-center">
           {project.toolsUsed?.map((tool:string, index:number) => {
             const bgColor=tool==="Flutter"?'blue-600':(tool==="Angular"?'red-700':(tool==="Node.js"?'green-700':(tool==="AWS"?'orange-light':'yellow')))
-            return (<div key={index} className={`bg-blue-600 py-2 px-8 mt-8 text-white text-lg cursor-default rounded-md transform hover:scale-105 transition ease-in`}>{tool}</div>)
+            return (<div key={index} className={`bg-${bgColor} py-2 px-8 mt-8 text-white text-lg cursor-default rounded-md transform hover:scale-105 transition ease-in`}>{tool}</div>)
           })}
         </div>
       </div>
