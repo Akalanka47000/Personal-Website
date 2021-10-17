@@ -2,10 +2,11 @@ import Link from 'next/link'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { FaGithubSquare } from 'react-icons/fa'
 import { SiHackerrank } from 'react-icons/si'
+import Spectrum from '../../common/audio/audioSpectrum'
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className="flex flex-col w-full h-44 justify-between items-center bg-black-see-through transition duration-500 ease">
+    <footer className="relative bottom-0 z-20 flex flex-col w-full h-44 justify-between items-center bg-black-see-through transition duration-500 ease">
       <div className="w-full h-0.5 bg-orange-dark shadow-red-thicker"></div>
       <div className="h-full flex flex-col justify-center sticky z-10">
         <div className=" flex flex-col justify-center items-center rounded-full bg-black-normal shadow-black-blur py-4 px-12 ">
@@ -39,6 +40,7 @@ const Footer = (): JSX.Element => {
           <div className="text-white mt-2">© 2021 Akalanka Perera</div>
         </div>
       </div>
+      <Spectrum/>
     </footer>
   )
 }
