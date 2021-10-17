@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import Project from './project'
@@ -7,13 +6,13 @@ const projects: any[] = [
   {
     name: 'LetMeKnow',
     description:
-      'Mobile application and Web portal for the healthcare industry. A portable and cost-efficient solution where consultants would be able to stream the patient vital signs in real time regardless of their location, which helps them to understand their patients and priorities their visits to the clinics / hospital',
+      'Mobile application and Web portal for the healthcare industry. A portable and cost-efficient solution where consultants would be able to stream the patient vital signs in real time regardless of their location, which helps them to understand their patients and prioritize their visits to the clinics / hospitals',
     toolsUsed: ['Flutter', 'Angular', 'Node.js', 'AWS'],
   },
   {
     name: 'QickTeam',
     description:
-      'A platform for individuals of similar interests to attend the same activity together and create great experiences. Users can use the app to alert others of his activity/games or event. The other users interested in being at the event/game will then indicate their availability. As soon as this phase is completed, the individuals can then meet up and enjoy the moment',
+      'A platform for individuals of similar interests to attend the same activity together and create great experiences. Users can use the app to alert others of his activity / game or event. The other users interested in being at the event/game will then indicate their availability. As soon as this phase is completed, the individuals can then meet up and enjoy the moment',
     toolsUsed: ['Flutter', 'Node.js', 'AWS'],
   },
   {
