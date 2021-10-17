@@ -9,6 +9,7 @@ import Navbar from '../components/layout/navbar'
 import Skills from '../components/skills/skills'
 import Resume from '../components/resume'
 import AudioControl from '../components/common/audio/audioControl'
+import ProjectCarousel from '../components/projects'
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Hero />
         <Skills />
-        <div className="w-screen h-screen"></div>
+        <ProjectCarousel/>
         <Resume />
       </Container>
       <AudioControl />
