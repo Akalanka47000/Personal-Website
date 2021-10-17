@@ -33,6 +33,7 @@ const ProjectCarousel = (): JSX.Element => {
   return (
     <>
       <div
+        id="project-section"
         className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white blink text-center mx-6 mb-6 lg:mb-12 cursor-default transition ease-in "
         data-aos="fade-right"
       >
