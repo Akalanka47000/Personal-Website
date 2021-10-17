@@ -22,7 +22,7 @@ const Layout = ({ children, title }: LayoutProps): JSX.Element => {
         <meta property="og:image" content={favIconPath} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className="bg-bgWhite text-textBlack font-roboto min-h-screen overflow-x-hidden">
+      <main className="bg-bgWhite text-textBlack font-roboto min-h-screen">
         {children}
       </main>
     </>

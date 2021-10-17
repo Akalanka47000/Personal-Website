@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { FaGithubSquare } from 'react-icons/fa'
 import { SiHackerrank } from 'react-icons/si'
-import Spectrum from '../../common/audioSpectrum'
 
 const Footer = (): JSX.Element => {
   return (
@@ -40,7 +39,6 @@ const Footer = (): JSX.Element => {
           <div className="text-white mt-2">© 2021 Akalanka Perera</div>
         </div>
       </div>
-      <Spectrum />
     </footer>
   )
 }
