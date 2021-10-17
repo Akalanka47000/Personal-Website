@@ -7,6 +7,7 @@ import Container from '../components/layout/container'
 import Footer from '../components/layout/footer'
 import Navbar from '../components/layout/navbar'
 import Spectrum from '../components/common/audioSpectrum'
+import Skills from '../components/skills/skills'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <Container>
         <Navbar />
         <Hero />
+        <Skills/>
         <div className="w-screen h-screen"></div>
         <Spectrum />
         <Footer />

@@ -5,7 +5,7 @@ import { BiDumbbell } from 'react-icons/bi'
 const Hero = (): JSX.Element => {
   return (
     <>
-      <div className="flex flex-col-reverse lg:flex-row ">
+      <div className="flex flex-col-reverse lg:flex-row">
         <img
           src="/portfolio/home/self.png"
           alt=""
