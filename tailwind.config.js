@@ -9,8 +9,8 @@ module.exports = {
           'see-through': 'rgb(0, 0, 0,0.3)',
         },
         white: '#ffffff',
-        gray:{
-          dark:'#0d0d0d',
+        gray: {
+          dark: '#0d0d0d',
         },
         orange: {
           dark: '#ff4000',
@@ -52,6 +52,9 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['"Roboto"'],
+      },
+      zIndex: {
+        60: 60,
       },
     },
   },
