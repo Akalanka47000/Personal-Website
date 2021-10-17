@@ -9,6 +9,11 @@ import type { AppProps } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     Aos.init({ offset: 0, duration: 1000 })
+    if (process.browser) {
+      document.addEventListener('load', () => {
+        Aos.refresh()
+      })
+    }
   }, [])
   return <Component {...pageProps} />
 }
