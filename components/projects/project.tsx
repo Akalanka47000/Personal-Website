@@ -4,7 +4,7 @@ interface props {
 const Project = ({ project }: props): JSX.Element => {
   return (
     <div className="w-full flex flex-col md:flex-row justify-center items-center px-8 lg:px-0">
-      <div className="w-10/12 sm:w-3/4 xl:w-7/12 2xl:5/12 h-full ml-0 lg:ml-20 mb-6 lg:mb-0 p-4 xl:p-32">
+      <div className="w-10/12 sm:w-3/4 xl:w-7/12 2xl:5/12 h-full ml-0 lg:ml-20 mb-6 lg:mb-0 p-4 2xl:p-32">
         <img
           src={`/portfolio/projects/${project.name}.png`}
           alt="project-image"
@@ -21,8 +21,7 @@ const Project = ({ project }: props): JSX.Element => {
         </div>
         <div className="w-full flex flex-row flex-wrap gap-x-4 justify-center md:justify-start items-center">
           {project.toolsUsed?.map((tool:string, index:number) => {
-            const bgColor=tool==="Flutter"?'blue-600':(tool==="Angular"?'red-700':(tool==="Node.js"?'green-700':(tool==="AWS"?'orange-light':'yellow')))
-            return (<div key={index} className={`bg-${bgColor} py-2 px-8 mt-8 text-white text-lg cursor-default rounded-md transform hover:scale-105 transition ease-in`}>{tool}</div>)
+            return (<div key={index} className={`bg-gray-700 hover:bg-orange-dark py-2 px-8 mt-8 text-white text-lg cursor-default rounded-md transform hover:scale-105 transition ease-in`}>{tool}</div>)
           })}
         </div>
       </div>

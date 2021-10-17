@@ -41,7 +41,7 @@ const ProjectCarousel = (): JSX.Element => {
       </div>
       <div
         data-aos="fade-left"
-        className="flex items-center justify-center flex-col mb-12"
+        className="flex items-center justify-center flex-col mb-32 2xl:mb-12"
       >
         <Carousel
           className="shadow-xl hover:shadow-2xl transition ease-in duration-200 w-full"
