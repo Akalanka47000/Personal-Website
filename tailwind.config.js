@@ -15,6 +15,7 @@ module.exports = {
       },
       width: {
         13: '3.25rem',
+        17: '4.25rem',
         '17vw': '17vw',
         '20vw': '20vw',
         '40vw': '40vw',
@@ -25,6 +26,7 @@ module.exports = {
       height: {
         0.5: '0.5px',
         13: '3.25rem',
+        17: '4.25rem',
         '50vh': '90vh',
         '100vh-16': 'calc(100vh - 60px)',
         '17vw': '17vw',
