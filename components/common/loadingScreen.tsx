@@ -21,7 +21,7 @@ const LoadingScreen = (): JSX.Element => {
   return (
     <div
       id="loader"
-      className="w-screen h-screen flex flex-col justify-center items-center fixed top-0 z-50 bg-black-normal transition ease duration-500"
+      className="w-full h-full flex flex-col justify-center items-center fixed top-0 z-50 bg-black-normal transition ease duration-500"
     >
       <div className="w-40vw h-40vw md:w-17vw md:h-17vw mb-12">
         <NavbarLogo />

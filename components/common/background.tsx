@@ -11,10 +11,10 @@ const Background = (): JSX.Element => {
   }
   return (
     <>
-      <div className="w-screen h-screen fixed bg-black-normal z-0"></div>
+      <div className="w-full h-full fixed bg-fixed bg-black-normal z-0"></div>
       <video
         id="bgVideo"
-        className="w-screen h-screen object-cover fixed top-0 z-10 opacity-50 pointer-events-none"
+        className="w-full h-full object-cover fixed bg-fixed top-0 z-10 opacity-50 pointer-events-none"
         autoPlay
         muted
         loop

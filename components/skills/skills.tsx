@@ -39,12 +39,12 @@ const skillSet = [
 const Skills = (): JSX.Element => {
   return (
     <>
-      <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white blink text-center mx-6 cursor-default transition ease-in mt-24 lg:mt-36 ">
+      <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white blink text-center mx-6 cursor-default transition ease-in mt-20 lg:mt-36" data-aos="fade-left">
         My Arsenal
       </div>
       <div
         id="skill-section"
-        className="w-full pt-24 lg:pt-36 py-36 px-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 gap-y-16 lg:gap-y-24 place-items-center"
+        className="w-full pt-20 lg:pt-36 py-36 px-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 gap-y-16 lg:gap-y-24 place-items-center"
       >
         {skillSet.map((skill, index) => {
           return (
