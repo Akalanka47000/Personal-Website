@@ -9,6 +9,9 @@ module.exports = {
           'see-through': 'rgb(0, 0, 0,0.3)',
         },
         white: '#ffffff',
+        gray:{
+          dark:'#0d0d0d',
+        },
         orange: {
           dark: '#ff4000',
         },
@@ -16,8 +19,11 @@ module.exports = {
       width: {
         13: '3.25rem',
         17: '4.25rem',
+        '14vw': '14vw',
+        '15vw': '15vw',
         '17vw': '17vw',
         '20vw': '20vw',
+        '33vw': '33vw',
         '40vw': '40vw',
         '45vw': '45vw',
         '50vw': '50vw',
@@ -29,11 +35,16 @@ module.exports = {
         17: '4.25rem',
         '50vh': '90vh',
         '100vh-16': 'calc(100vh - 60px)',
+        '14vw': '14vw',
+        '15vw': '15vw',
         '17vw': '17vw',
         '20vw': '20vw',
+        '33vw': '33vw',
         '40vw': '40vw',
       },
-      inset: {},
+      scale: {
+        120: '1.2',
+      },
       boxShadow: {
         red: '0px 0px 7px rgba(255, 64, 0, 0.9)',
         'red-thicker': '0px 0px 14px rgba(255, 64, 0, 0.9)',

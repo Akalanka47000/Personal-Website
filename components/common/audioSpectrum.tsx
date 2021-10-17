@@ -20,13 +20,13 @@ const Spectrum = (): JSX.Element => {
   return (
     <>
       <div
-        className="w-17 h-17 lg:w-20 lg:h-20 flex justify-center items-center bg-orange-dark rounded-full cursor-pointer sticky bottom-8 left-full mr-8 mb-8 filter hover:brightness-125 transition ease duration-500"
+        className="w-16 h-16 md:w-17 md:h-17 lg:w-20 lg:h-20 flex justify-center items-center bg-orange-dark rounded-full cursor-pointer sticky bottom-8 left-full mr-8 mb-8 filter hover:brightness-125 transition ease duration-500"
         onClick={toggleAudio}
       >
         {playing ? (
-          <CgPlayPause size={60} className="fill-current-color" />
+          <CgPlayPause size={53} className="fill-current-color transform md:scale-110" />
         ) : (
-          <MdPlayArrow size={50} className="fill-current-color" />
+          <MdPlayArrow size={44} className="fill-current-color transform md:scale-110" />
         )}
       </div>
       <audio id="audio-element" src="/portfolio/audio/music.mp3" loop></audio>
