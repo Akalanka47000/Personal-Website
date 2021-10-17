@@ -28,6 +28,10 @@ const Navbar = (): JSX.Element => {
       name: 'Achivements',
       path: 'achievement-section',
     },
+    {
+      name: 'Resume',
+      path: 'resume-section',
+    },
   ]
 
   return (
