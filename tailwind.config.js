@@ -31,6 +31,7 @@ module.exports = {
         '20vw': '20vw',
         '40vw': '40vw',
       },
+      inset: {},
       boxShadow: {
         red: '0px 0px 7px rgba(255, 64, 0, 0.9)',
         'red-thicker': '0px 0px 14px rgba(255, 64, 0, 0.9)',
@@ -42,7 +43,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: { brightness: ['hover', 'focus'] },
   },
   plugins: [],
 }

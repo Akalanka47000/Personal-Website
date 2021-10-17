@@ -1,57 +1,39 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import AudioSpectrum from 'react-audio-spectrum'
+import { MdPlayArrow } from 'react-icons/md'
+import { CgPlayPause } from 'react-icons/cg'
 
 const Spectrum = (): JSX.Element => {
-  const [played, setPlayed] = useState(false)
-  useEffect(() => {
-    setTimeout(() => {
-      const iframe = document.createElement('iframe')
-      iframe.setAttribute('src', '/portfolio/audio/silence.mp3')
-      iframe.style.height = '0px'
-      iframe.style.width = '0px'
-      iframe.allow = 'autoplay'
-      iframe.style.display = 'none'
-      document.body.appendChild(iframe)
-      if (process.browser && !played) {
-        document.addEventListener('mousemove', playAudio)
-      }
-    }, 4000)
-  }, [])
+  const [playing, setPlaying] = useState(false)
 
-  const playAudio = () => {
+  const toggleAudio = () => {
     const audio = document.getElementById('audio-element') as HTMLAudioElement
-    audio
-      .play()
-      .then(
-        () => {
-          audio.muted = false
-          audio.volume = 0.05
-          document.removeEventListener('mousemove', playAudio, true)
-          document.removeEventListener('mousemove', playAudio, false)
-          setPlayed(true)
-        },
-        () => {
-          console.log('promise rejected')
-        }
-      )
-      .catch(() => {
-        console.log('autoplay disabled in chrome')
-      })
+    if (playing) {
+      audio.pause()
+    } else {
+      audio.play()
+      audio.volume = 0.05
+    }
+    setPlaying(!playing)
   }
 
   return (
-    <div>
+    <>
+      <div
+        className="w-20 h-20 flex justify-center items-center bg-orange-dark rounded-full cursor-pointer sticky bottom-8 left-full mr-8 mb-8 filter hover:brightness-125 transition ease duration-500"
+        onClick={toggleAudio}
+      >
+        {playing ? (
+          <CgPlayPause size={60} className="fill-current-color" />
+        ) : (
+          <MdPlayArrow size={50} className="fill-current-color" />
+        )}
+      </div>
+      <audio id="audio-element" src="/portfolio/audio/music.mp3" loop></audio>
       <div
         className="absolute w-screen bottom-0 left-0 flex justify-center opacity-80"
         id="spectrum-container"
       >
-        <audio
-          id="audio-element"
-          src="/portfolio/audio/music.mp3"
-          autoPlay={false}
-          muted
-          loop
-        ></audio>
         <AudioSpectrum
           id="audio-canvas"
           height={150}
@@ -73,7 +55,7 @@ const Spectrum = (): JSX.Element => {
           gap={8}
         />
       </div>
-    </div>
+    </>
   )
 }
 
