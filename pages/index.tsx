@@ -7,6 +7,7 @@ import Container from '../components/layout/container'
 import Footer from '../components/layout/footer'
 import Navbar from '../components/layout/navbar'
 import Skills from '../components/skills/skills'
+import Resume from '../components/resume'
 import AudioControl from '../components/common/audio/audioControl'
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <Hero />
         <Skills />
         <div className="w-screen h-screen"></div>
+        <Resume />
       </Container>
       <AudioControl />
       <Footer />
