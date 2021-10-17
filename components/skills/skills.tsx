@@ -10,7 +10,7 @@ const skillSet = [
     logoWidth: '65%',
   },
   {
-    image: 'Angular',
+    image: 'angular',
     logoWidth: '52%',
   },
   {
