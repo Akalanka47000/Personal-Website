@@ -1,6 +1,6 @@
 ## Welcome to my personal website
 
-This is a [Next.js](https://nextjs.org/) project styled with [Tailwind CSS](https://tailwindcss.com/) and deployed on Github Pages.
+This is a [Next.js](https://nextjs.org/) project styled with [Tailwind CSS](https://tailwindcss.com/) and deployed on [Github Pages](https://pages.github.com/).
 
 ## Getting Started
 
