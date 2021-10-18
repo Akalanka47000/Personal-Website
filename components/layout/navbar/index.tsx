@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { DiGithubAlt } from 'react-icons/di'
@@ -7,8 +7,30 @@ import NavbarLogo from './logo'
 const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    toggleNav()
+    document.addEventListener('scroll', () => {
+      if (process.browser) {
+        const navbar = document.getElementById('mobile-nav') as HTMLElement
+        navbar.style.opacity = '0%'
+        navbar.style.transform = 'translateY(-100vh)'
+        setIsOpen(false)
+      }
+    })
+  }, [])
+
   const toggleNav = () => {
-    setIsOpen((prev) => !prev)
+    if (process.browser) {
+      const navbar = document.getElementById('mobile-nav') as HTMLElement
+      if (!isOpen) {
+        navbar.style.opacity = '100%'
+        navbar.style.transform = 'translateY(0px)'
+      } else {
+        navbar.style.opacity = '0%'
+        navbar.style.transform = 'translateY(-100vh)'
+      }
+    }
+    setIsOpen(!isOpen)
   }
 
   const menuItems = [
@@ -65,11 +87,7 @@ const Navbar = (): JSX.Element => {
                       : 'text-white text-lg'
                   } hover:text-orange-dark cursor-pointer transition ease-in mx-3`}
                 >
-                  <Link
-                    to={menuItem.path}
-                    spy={true}
-                    smooth={true}
-                  >
+                  <Link to={menuItem.path} spy={true} smooth={true}>
                     {menuItem.name}
                   </Link>
                 </div>
@@ -78,7 +96,7 @@ const Navbar = (): JSX.Element => {
 
             <a
               href="https://github.com/Akalanka47000/Personal-Website"
-              target="_blank" 
+              target="_blank"
             >
               <DiGithubAlt
                 size={35}
@@ -90,11 +108,29 @@ const Navbar = (): JSX.Element => {
               className="block lg:hidden z-20 cursor-pointer transition ease-in"
               onClick={toggleNav}
             >
-              {!isOpen ? (
-                <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-orange-dark transition ease-in" />
-              ) : (
-                ''
-              )}
+              <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-orange-dark transition ease-in" />
+              <div
+                id="mobile-nav"
+                className="fixed top-16 right-0 flex flex-col bg-black-normal px-4 py-4 rounded-sm transition duration-300 ease"
+              >
+                {menuItems?.map((menuItem, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={`flex lg:hidden font-medium text-white text-lg hover:text-orange-dark cursor-pointer transition ease-in my-2 mx-3`}
+                    >
+                      <Link
+                        to={menuItem.path}
+                        spy={true}
+                        smooth={true}
+                        onClick={toggleNav}
+                      >
+                        {menuItem.name}
+                      </Link>
+                    </div>
+                  )
+                })}
+              </div>
             </li>
           </ul>
         </nav>
