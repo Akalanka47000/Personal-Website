@@ -9,7 +9,7 @@ const Layout = ({ children, title }: LayoutProps): JSX.Element => {
   const pageTitle = title || 'Akalanka Perera | Personal Website'
   const pageDescription =
     'Hi, my name is Akalanka Perera and I am a nineteen year old, highly motivated undergraduate student fluent in programming as well as designing and adept to quick learning and sharp reconnaissance. Welcome and get to know me better'
-  const favIconPath = 'favicon.png'
+  const favIconPath = '/portfolio/favicon.png'
 
   return (
     <>
