@@ -15,6 +15,7 @@ const Layout = ({ children, title }: LayoutProps): JSX.Element => {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <link rel="icon" href="/portfolio/favicon.ico" />
         <meta name="description" content={pageDescription} />
         <meta name="image" content={favIconPath} />
         <meta property="og:title" content={pageTitle} />
