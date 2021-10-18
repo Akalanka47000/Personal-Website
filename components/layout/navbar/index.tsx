@@ -5,7 +5,7 @@ import { DiGithubAlt } from 'react-icons/di'
 import NavbarLogo from './logo'
 
 const Navbar = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   useEffect(() => {
     toggleNav()
