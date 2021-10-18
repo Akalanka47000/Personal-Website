@@ -25,7 +25,7 @@ const Navbar = (): JSX.Element => {
       path: 'project-section',
     },
     {
-      name: 'Achivements',
+      name: 'Achievements',
       path: 'achievement-section',
     },
     {

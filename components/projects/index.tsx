@@ -40,7 +40,6 @@ const ProjectCarousel = (): JSX.Element => {
         Projects
       </div>
       <div
-        data-aos="fade-left"
         className="flex items-center justify-center flex-col mb-32 2xl:mb-12"
       >
         <Carousel
