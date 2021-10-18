@@ -19,18 +19,18 @@ const AudioControl = (): JSX.Element => {
   return (
     <>
       <div
-        className="w-16 h-16 md:w-17 md:h-17 lg:w-20 lg:h-20 flex justify-center items-center bg-orange-dark rounded-full cursor-pointer sticky z-30 bottom-8 left-full mr-8 mb-8 filter hover:brightness-125 transition ease duration-500"
+        className="w-16 h-16 md:w-17 md:h-17 lg:w-20 lg:h-20 flex justify-center items-center bg-orange-dark rounded-full cursor-pointer sticky z-40 bottom-8 left-full mr-8 mb-8 filter hover:brightness-125 border-t-2 border-transparent hover:border-red-300 transform hover:rotate-360 transition ease duration-500"
         onClick={toggleAudio}
       >
         {playing ? (
           <CgPlayPause
             size={53}
-            className="fill-current-color transform md:scale-110"
+            className="fill-current-color transform absolute md:scale-110"
           />
         ) : (
           <MdPlayArrow
             size={44}
-            className="fill-current-color transform md:scale-110"
+            className="fill-current-color transform absolute md:scale-110"
           />
         )}
       </div>

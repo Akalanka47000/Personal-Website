@@ -10,6 +10,7 @@ import Skills from '../components/skills/skills'
 import Resume from '../components/resume'
 import AudioControl from '../components/common/audio/audioControl'
 import ProjectCarousel from '../components/projects'
+import Achievements from '../components/achivements'
 
 const Home: NextPage = () => {
   return (
@@ -20,7 +21,8 @@ const Home: NextPage = () => {
         <Navbar />
         <Hero />
         <Skills />
-        <ProjectCarousel/>
+        <ProjectCarousel />
+        <Achievements />
         <Resume />
       </Container>
       <AudioControl />

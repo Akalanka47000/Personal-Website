@@ -16,7 +16,8 @@ module.exports = {
           dark: '#ff4000',
           light: '#f8981d',
         },
-        yellow:'#fda612',
+        yellow: '#fda612',
+        transparent: 'rgb(0, 0, 0, 0)',
       },
       width: {
         13: '3.25rem',
@@ -46,6 +47,9 @@ module.exports = {
       },
       scale: {
         120: '1.2',
+      },
+      rotate: {
+        360: '360deg',
       },
       boxShadow: {
         red: '0px 0px 7px rgba(255, 64, 0, 0.9)',
