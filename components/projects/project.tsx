@@ -16,7 +16,7 @@ const Project = ({ project }: props): JSX.Element => {
         <div className="font-bold text-4xl text-center lg:text-left text-orange-dark blink cursor-default transition ease-in">
           {project.name}
         </div>
-        <div className="font-bold text-xl xl:text-2xl text-white text-center lg:text-left mt-6 cursor-default transition ease-in">
+        <div className="font-bold text-lg md:text-xl xl:text-2xl text-white text-center lg:text-left mt-6 cursor-default transition ease-in">
           {project.description}
         </div>
         <div className="w-full flex flex-row flex-wrap gap-x-4 justify-center md:justify-start items-center">
