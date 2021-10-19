@@ -64,7 +64,7 @@ const Navbar = (): JSX.Element => {
       <div className="flex justify-between items-center">
         <div className="flex flex-row items-center">
           <div className="w-11 h-11 ml-4 flex items-center">
-            <Link href="/">
+            <Link href="/portfolio/">
               <a>
                 <NavbarLogo />
               </a>
