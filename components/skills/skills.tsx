@@ -10,12 +10,20 @@ const skillSet = [
     logoWidth: '65%',
   },
   {
+    image: 'vue',
+    logoWidth: '65%',
+  },
+  {
     image: 'angular',
     logoWidth: '52%',
   },
   {
     image: 'node',
     logoWidth: '45%',
+  },
+  {
+    image: 'laravel',
+    logoWidth: '50%',
   },
   {
     image: 'java',
@@ -25,9 +33,17 @@ const skillSet = [
     image: 'mongo',
     logoWidth: '73%',
   },
+  {
+    image: 'mysql',
+    logoWidth: '73%',
+  },
   ,
   {
     image: 'firebase',
+    logoWidth: '58%',
+  },
+  {
+    image: 'ghactions',
     logoWidth: '58%',
   },
   ,

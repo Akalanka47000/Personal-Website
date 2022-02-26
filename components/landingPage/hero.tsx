@@ -21,7 +21,7 @@ const Hero = (): JSX.Element => {
             Lanka
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-orange-dark mt-6 cursor-default transition ease-in">
-            I&apos;m an aspiring full-stack developer
+            I&apos;m a full-stack developer
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-orange-dark mt-6 cursor-default transition ease-in">
             My hobbies include

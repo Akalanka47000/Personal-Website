@@ -11,7 +11,7 @@ const AudioControl = (): JSX.Element => {
       audio.pause()
     } else {
       audio.play()
-      audio.volume = 0.05
+      audio.volume = 0.2
     }
     setPlaying(!playing)
   }
