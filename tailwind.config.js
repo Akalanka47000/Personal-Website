@@ -65,7 +65,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: { brightness: ['hover', 'focus'] },
+    extend: { 
+      brightness: ['hover', 'focus'],
+      height: ['group-hover'], 
+    },
   },
   plugins: [],
 }
