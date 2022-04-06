@@ -4,6 +4,13 @@ import Project from './project'
 
 const projects: any[] = [
   {
+    name: 'Curfox DMS',
+    description:
+      'Software for courier companies to build manage and grow their network',
+    toolsUsed: ['Laravel', 'Vue.js', 'Flutter', 'Docusaurus', 'Github Actions'],
+    link: 'https://curfox.com',
+  },
+  {
     name: 'LetMeKnow',
     description:
       'Mobile application and Web portal for the healthcare industry. A portable and cost-efficient solution where consultants would be able to stream the patient vital signs in real time regardless of their location, which helps them to understand their patients and prioritize their visits to the clinics / hospitals',
@@ -20,6 +27,20 @@ const projects: any[] = [
     description:
       'Web portal and Mobile Application for marking and tracking Covid-19 patients with a real time notification and tracking system. Built for a mini-hackathon at university',
     toolsUsed: ['Flutter', 'Angular', 'Node.js', 'AWS'],
+    link: 'https://github.com/Akalanka47000/Covid-alert',
+  },
+  {
+    name: 'FCM-Server',
+    description:
+      'An open source Node.js based server with a single endpoint to broadcast a message to a given set of devices',
+    toolsUsed: ['Flutter', 'Firebase'],
+    link: 'https://github.com/Akalanka47000/FCM-Server',
+  },
+  {
+    name: 'Google Maps Replica',
+    description:
+      'Mobile application to show directions to a particular destination with automated distance alerts between time intervals',
+    toolsUsed: ['Flutter', 'GCP'],
   },
   {
     name: 'AI-Motion',
