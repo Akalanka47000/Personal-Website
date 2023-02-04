@@ -28,6 +28,8 @@ const ProjectCarousel = (): JSX.Element => {
           infiniteLoop={true}
           emulateTouch={true}
           swipeable={true}
+          preventMovementUntilSwipeScrollTolerance={true}
+          swipeScrollTolerance={50}
         >
           {projects?.map((project, index) => {
             return <Project key={index} project={project} />

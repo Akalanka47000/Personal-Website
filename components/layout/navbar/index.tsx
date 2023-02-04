@@ -71,7 +71,7 @@ const Navbar = (): JSX.Element => {
             </Link>
           </div>
           <div className="font-medium text-xl text-white hover:text-orange-dark ml-4 cursor-default transition ease-in">
-            Portfolio
+            Programmer's Log
           </div>
         </div>
 
