@@ -40,13 +40,6 @@ const projects: Project[] = [
         link: 'https://github.com/Akalanka47000/Covid-alert',
     },
     {
-        name: 'FCM-Server',
-        description:
-            'An open source Node.js based server with a single endpoint to broadcast a message to a given set of devices',
-        toolsUsed: ['Flutter', 'Firebase'],
-        link: 'https://github.com/Akalanka47000/FCM-Server',
-    },
-    {
         name: 'Google Maps Replica',
         description:
             'Mobile application to show directions to a particular destination with automated distance alerts between time intervals',

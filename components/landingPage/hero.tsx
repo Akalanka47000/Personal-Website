@@ -22,10 +22,10 @@ const Hero = (): JSX.Element => {
               (Date.now() - new Date('2002-06-06T18:00:00.000Z').getTime()) /
                 31536000000
             )}{' '}
-            year old software engineer from Sri Lanka
+            year old full-stack engineer from Sri Lanka
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-orange-dark mt-6 cursor-default transition ease-in">
-            I&apos;m a full-stack developer
+            Right now I&apos;m probably hunting bugs
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-orange-dark mt-6 cursor-default transition ease-in">
             My hobbies include

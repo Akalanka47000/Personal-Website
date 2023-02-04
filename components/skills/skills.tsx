@@ -80,7 +80,7 @@ const Skills = (): JSX.Element => {
               )
               line.setAttribute(
                 'style',
-                'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.5;'
+                'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.4;'
               )
               document.getElementById('lightning-grid')?.append(line)
             }
