@@ -52,7 +52,8 @@ const Navbar = (): JSX.Element => {
     },
     {
       name: 'Resume',
-      path: 'resume-section',
+      path: '/portfolio/resume.pdf',
+      download: true,
     },
   ]
 
@@ -87,13 +88,18 @@ const Navbar = (): JSX.Element => {
                       : 'text-white text-lg'
                   } hover:text-orange-dark cursor-pointer transition ease-in mx-3`}
                 >
-                  <Link to={menuItem.path} spy={true} smooth={true}>
-                    {menuItem.name}
-                  </Link>
+                  {menuItem.download ? (
+                    <a href={menuItem.path} download>
+                      {menuItem.name}
+                    </a>
+                  ) : (
+                    <Link to={menuItem.path} spy={true} smooth={true}>
+                      {menuItem.name}
+                    </Link>
+                  )}
                 </div>
               )
             })}
-
             <a
               href="https://github.com/Akalanka47000/Personal-Website"
               target="_blank"
@@ -119,14 +125,20 @@ const Navbar = (): JSX.Element => {
                       key={index}
                       className={`flex lg:hidden font-medium text-white text-lg hover:text-orange-dark cursor-pointer transition ease-in my-2 mx-3`}
                     >
-                      <Link
-                        to={menuItem.path}
-                        spy={true}
-                        smooth={true}
-                        onClick={toggleNav}
-                      >
-                        {menuItem.name}
-                      </Link>
+                      {menuItem.download ? (
+                        <a href={menuItem.path} download>
+                          {menuItem.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={menuItem.path}
+                          spy={true}
+                          smooth={true}
+                          onClick={toggleNav}
+                        >
+                          {menuItem.name}
+                        </Link>
+                      )}
                     </div>
                   )
                 })}
