@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import ApplicationState from '@appstate'
 import SkillCard from './skillCard'
 import useEffectOnce from '../../hooks/useEffectOnce'
-import { desktopSkills, mobileSkills } from './data'
+import { desktopSkills, mobileSkills, Skill } from './data'
 import { useResponsive } from '../../hooks/useResponsive'
 
 const Skills = (): JSX.Element => {
@@ -15,7 +15,7 @@ const Skills = (): JSX.Element => {
 
   const [scrollPosition, setScrollPosition] = useState<Number>(0)
   const [lastRendered, setLastRendered] = useState<String>()
-  const [skills, setSkills] = useState<any>([])
+  const [skills, setSkills] = useState<Skill[]>([])
 
   useEffect(() => {
     setSkills(mobile ? mobileSkills : desktopSkills)
