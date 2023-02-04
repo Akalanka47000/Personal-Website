@@ -33,7 +33,6 @@ const Skills = (): JSX.Element => {
     document.querySelectorAll('.lightning-grid-line')?.forEach((line) => {
       line.remove()
     })
-    setLastRendered(undefined)
   }
 
   useEffect(() => {
