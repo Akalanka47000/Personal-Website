@@ -7,21 +7,21 @@ interface Skill {
 
 const skills: Skill[] = [
     {
+        name: 'NextJS',
+        image: 'next',
+        logoWidth: '83%',
+        link: 'https://nextjs.org/'
+    },
+    {
         name: 'Flutter',
         image: 'flutter',
         logoWidth: '53%',
         link: 'https://flutter.dev/'
     },
     {
-        name: 'React',
-        image: 'react',
-        logoWidth: '65%',
-        link: 'https://reactjs.org/'
-    },
-    {
-        name: 'Vue',
+        name: 'VueJS',
         image: 'vue',
-        logoWidth: '65%',
+        logoWidth: '60%',
         link: 'https://vuejs.org/'
     },
     {
@@ -31,7 +31,7 @@ const skills: Skill[] = [
         link: 'https://angular.io/'
     },
     {
-        name: 'Node',
+        name: 'NodeJS',
         image: 'node',
         logoWidth: '45%',
         link: 'https://nodejs.org/en/'
@@ -43,10 +43,16 @@ const skills: Skill[] = [
         link: 'https://laravel.com/docs/9.x'
     },
     {
-        name: 'Java',
-        image: 'java',
-        logoWidth: '62%',
-        link: 'https://www.java.com/en/'
+        name: 'NestJS',
+        image: 'nest',
+        logoWidth: '55%',
+        link: 'https://nestjs.com/'
+    },
+    {
+        name: 'Spring',
+        image: 'spring',
+        logoWidth: '75%',
+        link: 'https://spring.io'
     },
     {
         name: 'MongoDB',
@@ -67,15 +73,27 @@ const skills: Skill[] = [
         link: 'https://firebase.google.com/'
     },
     {
-        name: 'Github Actions',
-        image: 'ghactions',
-        logoWidth: '58%',
-        link: 'https://github.com/features/actions'
+        name: 'Gitlab',
+        image: 'gitlab',
+        logoWidth: '55%',
+        link: 'https://about.gitlab.com/'
+    },
+    {
+        name: 'Kubernetes',
+        image: 'kubernetes',
+        logoWidth: '55%',
+        link: 'https://kubernetes.io/'
+    },
+    {
+        name: 'Azure',
+        image: 'azure',
+        logoWidth: '55%',
+        link: 'https://azure.microsoft.com/en-us'
     },
     {
         name: 'After Effects',
         image: 'AE',
-        logoWidth: '65%',
+        logoWidth: '62%',
         link: 'https://www.adobe.com/products/aftereffects.html'
     },
 ]

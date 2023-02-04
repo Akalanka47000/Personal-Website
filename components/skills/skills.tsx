@@ -77,7 +77,7 @@ const Skills = (): JSX.Element => {
       >
         My Arsenal
       </div>
-      <div className="w-full pt-20 lg:pt-36 py-36 pb-24 lg:pb-36 px-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 gap-y-16 lg:gap-y-24 place-items-center">
+      <div className="w-full pt-20 lg:pt-36 py-36 pb-24 lg:pb-36 px-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-10 gap-y-16 lg:gap-y-24 place-items-center">
         {skills.map((skill, index) => {
           return (
             <div
