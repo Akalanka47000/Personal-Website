@@ -17,7 +17,9 @@ const NavbarLogo = (): JSX.Element => {
       }, 200)
     })
   }
-  return <img id="logo" src={imageSrc} alt="logo" />
+  return (
+    <img id="logo" src={imageSrc} alt="logo"/>
+  )
 }
 
 export default NavbarLogo

@@ -87,7 +87,7 @@ const Navbar = (): JSX.Element => {
                       : 'text-white text-lg'
                   } hover:text-orange-dark cursor-pointer transition ease-in mx-3`}
                 >
-                  <Link to={menuItem.path} spy={true} smooth={true}>
+                  <Link to={menuItem.path || ""} spy={true} smooth={true}>
                     {menuItem.name}
                   </Link>
                 </div>

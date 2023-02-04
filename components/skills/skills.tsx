@@ -92,6 +92,7 @@ const Skills = (): JSX.Element => {
               key={index}
             >
               <SkillCard
+                index={index}
                 name= {skill?.name || ''}
                 logo={skill?.image || ''}
                 width={skill?.logoWidth || ''}

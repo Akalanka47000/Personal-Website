@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  media: false,
   theme: {
     extend: {
       colors: {
@@ -22,34 +22,11 @@ module.exports = {
       width: {
         13: '3.25rem',
         17: '4.25rem',
-        '14vw': '14vw',
-        '15vw': '15vw',
-        '17vw': '17vw',
-        '20vw': '20vw',
-        '33vw': '33vw',
-        '40vw': '40vw',
-        '45vw': '45vw',
-        '50vw': '50vw',
-        '48%': '48%',
       },
       height: {
-        0.5: '0.5px',
         13: '3.25rem',
         17: '4.25rem',
-        '50vh': '90vh',
         '100vh-16': 'calc(100vh - 60px)',
-        '14vw': '14vw',
-        '15vw': '15vw',
-        '17vw': '17vw',
-        '20vw': '20vw',
-        '33vw': '33vw',
-        '40vw': '40vw',
-      },
-      scale: {
-        120: '1.2',
-      },
-      rotate: {
-        360: '360deg',
       },
       boxShadow: {
         red: '0px 0px 7px rgba(255, 64, 0, 0.9)',
@@ -58,9 +35,6 @@ module.exports = {
       },
       fontFamily: {
         roboto: ['"Roboto"'],
-      },
-      zIndex: {
-        60: 60,
       },
     },
   },
