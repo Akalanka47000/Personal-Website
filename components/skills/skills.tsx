@@ -3,15 +3,23 @@ import { useSelector } from 'react-redux'
 import ApplicationState from '@appstate'
 import SkillCard from './skillCard'
 import useEffectOnce from '../../hooks/useEffectOnce'
-import skills from './data'
+import { desktopSkills, mobileSkills } from './data'
+import { useResponsive } from '../../hooks/useResponsive'
 
 const Skills = (): JSX.Element => {
   const { hoveredCard } = useSelector(
     (state: ApplicationState) => state.ui.skills
   )
 
+  const { mobile } = useResponsive()
+
   const [scrollPosition, setScrollPosition] = useState<Number>(0)
   const [lastRendered, setLastRendered] = useState<String>()
+  const [skills, setSkills] = useState<any>([])
+
+  useEffect(() => {
+    setSkills(mobile ? mobileSkills : desktopSkills)
+  }, [mobile])
 
   useEffectOnce(() => {
     const onScroll = (e: any) => {
@@ -22,7 +30,7 @@ const Skills = (): JSX.Element => {
   })
 
   const cleanGrid = () => {
-    document.querySelectorAll('.lightning-grid-line').forEach((line) => {
+    document.querySelectorAll('.lightning-grid-line')?.forEach((line) => {
       line.remove()
     })
     setLastRendered(undefined)
@@ -31,9 +39,13 @@ const Skills = (): JSX.Element => {
   useEffect(() => {
     if (process.browser) {
       cleanGrid()
-      if (hoveredCard) {
+      if (hoveredCard && !mobile) {
         const centerElement = document.getElementById(hoveredCard)
-        if (window.getComputedStyle(centerElement!).getPropertyValue("opacity") === "1") {
+        if (
+          window
+            .getComputedStyle(centerElement!)
+            .getPropertyValue('opacity') === '1'
+        ) {
           const originBounds = centerElement?.getBoundingClientRect()
           skills.forEach((_skill, index) => {
             if (index !== Number(hoveredCard.split('-').pop())) {
@@ -44,7 +56,12 @@ const Skills = (): JSX.Element => {
                 'http://www.w3.org/2000/svg',
                 'line'
               )
-              line.setAttribute('class', `lightning-grid-line vh ${lastRendered !== hoveredCard ? 'animate-grid-mesh' : ''}`)
+              line.setAttribute(
+                'class',
+                `lightning-grid-line vh ${
+                  lastRendered !== hoveredCard ? 'animate-grid-mesh' : ''
+                }`
+              )
               line.setAttribute(
                 'x1',
                 (originBounds!.left + originBounds!.width / 2).toString()
@@ -61,7 +78,10 @@ const Skills = (): JSX.Element => {
                 'y2',
                 (target!.top + target!.height / 2).toString()
               )
-              line.setAttribute('style', 'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.5;')
+              line.setAttribute(
+                'style',
+                'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.5;'
+              )
               document.getElementById('lightning-grid')?.append(line)
             }
           })
@@ -85,7 +105,7 @@ const Skills = (): JSX.Element => {
           return (
             <div
               data-aos={index % 2 == 0 ? 'fade-right' : 'fade-left'}
-              key={index}
+              key={`${skill?.name}-${index}`}
             >
               <SkillCard
                 index={index}

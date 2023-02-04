@@ -5,7 +5,7 @@ interface Skill {
     link: string
 }
 
-const skills: Skill[] = [
+const base: Skill[] = [
     {
         name: 'NextJS',
         image: 'next',
@@ -90,6 +90,10 @@ const skills: Skill[] = [
         logoWidth: '55%',
         link: 'https://azure.microsoft.com/en-us'
     },
+]
+
+export const desktopSkills: Skill[] = [
+    ...base,
     {
         name: 'After Effects',
         image: 'AE',
@@ -98,4 +102,18 @@ const skills: Skill[] = [
     },
 ]
 
-export default skills
+export const mobileSkills: Skill[] = [
+    ...base,
+    {
+        name: 'Docker',
+        image: 'docker',
+        logoWidth: '61%',
+        link: 'https://www.docker.com/'
+    },
+    {
+        name: 'After Effects',
+        image: 'AE',
+        logoWidth: '62%',
+        link: 'https://www.adobe.com/products/aftereffects.html'
+    },
+]

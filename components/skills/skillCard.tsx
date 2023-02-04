@@ -58,7 +58,7 @@ const SkillCard = ({
         </div>
         <div className="w-full h-0 group-hover:h-full opacity-0 group-hover:opacity-80 bg-gray-dark border-orange-dark border-3 absolute bottom-0 left-0 z-10 flex justify-center items-center transition-all ease-out duration-500" />
         <div className="w-full h-0 group-hover:h-full opacity-0 group-hover:opacity-100 absolute bottom-0 left-0 z-10 flex justify-center items-center transition-all ease-out duration-500">
-          <div className="text-white text-3xl text-center">{name}</div>
+          <div className="text-white text-xl md:text-3xl text-center">{name}</div>
         </div>
       </div>
     </a>
