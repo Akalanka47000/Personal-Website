@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import { Provider } from 'react-redux'
 import Aos from 'aos'
+import Layout from '../components/layout'
 import store from '../store'
 import 'tailwindcss/tailwind.css'
 import 'aos/dist/aos.css'
@@ -17,7 +18,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }, [])
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <Layout title="Akalanka Perera | Portfolio">
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }
