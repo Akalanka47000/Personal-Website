@@ -3,6 +3,9 @@ module.exports = {
   media: false,
   theme: {
     extend: {
+      borderWidth: {
+        3: '3px',
+      },
       colors: {
         black: {
           normal: '#000000',

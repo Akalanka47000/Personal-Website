@@ -7,7 +7,7 @@ import store from '../store'
 import 'tailwindcss/tailwind.css'
 import 'aos/dist/aos.css'
 import '../styles/globals.css'
-import '../styles/clipper.css'
+import '../styles/animations.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
