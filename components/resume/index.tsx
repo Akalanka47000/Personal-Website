@@ -7,7 +7,7 @@ const Resume = (): JSX.Element => {
       className="w-full flex justify-center items-center mb-24"
       data-aos="fade-right"
     >
-      <ResumeButton text='Download a copy of my Resume' extraClasses='hidden md:flex py-5'/>
+      <ResumeButton text='Download a copy of my resume' extraClasses='hidden md:flex py-5'/>
       <ResumeButton text='Download Resume' extraClasses='flex md:hidden py-4'/>
     </div>
   )

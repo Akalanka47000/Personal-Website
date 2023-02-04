@@ -32,38 +32,41 @@ const Skills = (): JSX.Element => {
     if (process.browser) {
       cleanGrid()
       if (hoveredCard) {
-        const center = document.getElementById(hoveredCard)?.getBoundingClientRect()
-        skills.forEach((_skill, index) => {
-          if (index !== Number(hoveredCard.split('-').pop())) {
-            const target = document
-              .getElementById(`skill-card-${index}`)
-              ?.getBoundingClientRect()
-            const line = document.createElementNS(
-              'http://www.w3.org/2000/svg',
-              'line'
-            )
-            line.setAttribute('class', `lightning-grid-line vh ${lastRendered !== hoveredCard ? 'animate-grid-mesh' : ''}`)
-            line.setAttribute(
-              'x1',
-              (center!.left + center!.width / 2).toString()
-            )
-            line.setAttribute(
-              'y1',
-              (center!.top + center!.height / 2).toString()
-            )
-            line.setAttribute(
-              'x2',
-              (target!.left + target!.width / 2).toString()
-            )
-            line.setAttribute(
-              'y2',
-              (target!.top + target!.height / 2).toString()
-            )
-            line.setAttribute('style', 'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.5;')
-            document.getElementById('lightning-grid')?.append(line)
-          }
-        })
-        setLastRendered(hoveredCard)
+        const centerElement = document.getElementById(hoveredCard)
+        if (window.getComputedStyle(centerElement!).getPropertyValue("opacity") === "1") {
+          const originBounds = centerElement?.getBoundingClientRect()
+          skills.forEach((_skill, index) => {
+            if (index !== Number(hoveredCard.split('-').pop())) {
+              const target = document
+                .getElementById(`skill-card-${index}`)
+                ?.getBoundingClientRect()
+              const line = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'line'
+              )
+              line.setAttribute('class', `lightning-grid-line vh ${lastRendered !== hoveredCard ? 'animate-grid-mesh' : ''}`)
+              line.setAttribute(
+                'x1',
+                (originBounds!.left + originBounds!.width / 2).toString()
+              )
+              line.setAttribute(
+                'y1',
+                (originBounds!.top + originBounds!.height / 2).toString()
+              )
+              line.setAttribute(
+                'x2',
+                (target!.left + target!.width / 2).toString()
+              )
+              line.setAttribute(
+                'y2',
+                (target!.top + target!.height / 2).toString()
+              )
+              line.setAttribute('style', 'stroke: #ff4000; stroke-width: 1; pointer-events: none; opacity: 0.5;')
+              document.getElementById('lightning-grid')?.append(line)
+            }
+          })
+          setLastRendered(hoveredCard)
+        }
       }
     }
   }, [hoveredCard, scrollPosition])
