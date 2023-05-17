@@ -6,7 +6,7 @@ interface props {
 const ResumeButton = ({ text, extraClasses }: props): JSX.Element => {
   return (
     <a
-      href="/portfolio/resume.pdf"
+      href="/resume.pdf"
       download
       className={`opacity-90 px-10 py-4 mx-6 bg-orange-dark text-lg lg:text-xl text-white text-center rounded-md transform filter hover:brightness-125 hover:scale-105 transition ease duration-500 ${extraClasses}`}
     >

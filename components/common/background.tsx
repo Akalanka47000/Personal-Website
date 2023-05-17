@@ -20,7 +20,7 @@ const Background = (): JSX.Element => {
         loop
         disablePictureInPicture
       >
-        <source src="/portfolio/home/background.mp4" type="video/mp4" />
+        <source src="/home/background.mp4" type="video/mp4" />
       </video>
     </>
   )

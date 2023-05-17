@@ -52,7 +52,7 @@ const Navbar = (): JSX.Element => {
     },
     {
       name: 'Resume',
-      path: '/portfolio/resume.pdf',
+      path: '/resume.pdf',
       download: true,
     },
   ]
@@ -65,7 +65,7 @@ const Navbar = (): JSX.Element => {
       <div className="flex justify-between items-center">
         <div className="flex flex-row items-center">
           <div className="w-11 h-11 ml-4 flex items-center">
-            <Link href="/portfolio/">
+            <Link href="/">
               <a>
                 <NavbarLogo />
               </a>
@@ -101,7 +101,7 @@ const Navbar = (): JSX.Element => {
               )
             })}
             <a
-              href="https://github.com/Akalanka47000/Personal-Website"
+              href="https://github.com/Akalanka47000/akalanka47000.github.io"
               target="_blank"
             >
               <DiGithubAlt

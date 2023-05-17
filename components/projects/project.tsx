@@ -10,7 +10,7 @@ const Project = ({ project }: props): JSX.Element => {
           className={`w-10/12 sm:w-3/4 xl:w-7/12 2xl:5/12 h-full ml-0 lg:ml-20 mb-6 lg:mb-0 p-4 2xl:p-32 ${project.link ? 'cursor-pointer' : ''}`} data-aos="fade-right"
         >
           <img
-            src={`/portfolio/projects/${project.name}.png`}
+            src={`/projects/${project.name}.png`}
             alt="project-image"
             className={` `}
           />

@@ -34,7 +34,7 @@ const AudioControl = (): JSX.Element => {
           />
         )}
       </div>
-      <audio id="audio-element" src="/portfolio/audio/music.mp3" loop></audio>
+      <audio id="audio-element" src="/audio/music.mp3" loop></audio>
     </>
   )
 }

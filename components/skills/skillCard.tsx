@@ -51,7 +51,7 @@ const SkillCard = ({
         <div className={`${borderStyle} border-r-4 top-0 w-full clipHeight`} />
         <div className="w-full h-full bg-gray-dark/70 border-orange-dark border group-hover:border-3 absolute top-0 left-0 z-10 shadow-xl flex justify-center items-center ">
           <img
-            src={`/portfolio/skills/${logo}.png`}
+            src={`/skills/${logo}.png`}
             alt="skill"
             style={{ width: `${width}` }}
           />
