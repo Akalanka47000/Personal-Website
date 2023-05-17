@@ -17,7 +17,7 @@ jobs:
           node-version: 16
 
       - name: Install PNPM
-        run: npm install -g pnpm
+        run: npm install -g pnpm@7
 
       - name: Install project
         run: pnpm install
