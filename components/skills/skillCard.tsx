@@ -49,14 +49,14 @@ const SkillCard = ({
           className={`${borderStyle} border-l-4 bottom-0 w-full clipHeight`}
         />
         <div className={`${borderStyle} border-r-4 top-0 w-full clipHeight`} />
-        <div className="w-full h-full bg-gray-dark/70 border-orange-dark border group-hover:border-3 absolute top-0 left-0 z-10 shadow-xl flex justify-center items-center ">
+        <div className="w-full h-full bg-gray-dark/70 border-primary border group-hover:border-3 absolute top-0 left-0 z-10 shadow-xl flex justify-center items-center ">
           <img
             src={`/skills/${logo}.png`}
             alt="skill"
             style={{ width: `${width}` }}
           />
         </div>
-        <div className="w-full h-0 group-hover:h-full opacity-0 group-hover:opacity-80 bg-gray-dark border-orange-dark border-3 absolute bottom-0 left-0 z-10 flex justify-center items-center transition-all ease-out duration-500" />
+        <div className="w-full h-0 group-hover:h-full opacity-0 group-hover:opacity-80 bg-gray-dark border-primary border-3 absolute bottom-0 left-0 z-10 flex justify-center items-center transition-all ease-out duration-500" />
         <div className="w-full h-0 group-hover:h-full opacity-0 group-hover:opacity-100 absolute bottom-0 left-0 z-10 flex justify-center items-center transition-all ease-out duration-500">
           <div className="text-white text-xl md:text-3xl text-center">{name}</div>
         </div>

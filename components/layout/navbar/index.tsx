@@ -60,18 +60,14 @@ const Navbar = (): JSX.Element => {
   return (
     <header
       id="about-section"
-      className="flex flex-row w-full h-16 justify-between items-center shadow-red hover:shadow-red-thicker z-20 bg-black-see-through transition duration-500 ease"
+      className="flex flex-row w-full h-[4.25rem] justify-between items-center shadow-red z-20 bg-black-see-through transition duration-500 ease"
     >
       <div className="flex justify-between items-center">
         <div className="flex flex-row items-center">
           <div className="w-11 h-11 ml-4 flex items-center">
-            <Link href="/">
-              <a>
-                <NavbarLogo />
-              </a>
-            </Link>
+            <NavbarLogo />
           </div>
-          <div className="font-medium text-xl text-white hover:text-orange-dark ml-4 cursor-default transition ease-in">
+          <div className="font-medium text-xl text-white hover:text-primary ml-4 cursor-default transition ease-in">
             Programmer's Log
           </div>
         </div>
@@ -83,10 +79,8 @@ const Navbar = (): JSX.Element => {
                 <div
                   key={index}
                   className={`hidden lg:flex font-medium  ${
-                    index == 0
-                      ? 'text-orange-dark text-xl'
-                      : 'text-white text-lg'
-                  } hover:text-orange-dark cursor-pointer transition ease-in mx-3`}
+                    index == 0 ? 'text-primary text-xl' : 'text-white text-lg'
+                  } hover:text-primary cursor-pointer transition ease-in mx-3`}
                 >
                   {menuItem.download ? (
                     <a href={menuItem.path} download>
@@ -106,7 +100,7 @@ const Navbar = (): JSX.Element => {
             >
               <DiGithubAlt
                 size={35}
-                className="fill-current-color text-white hover:text-orange-dark transition ease-in ml-2"
+                className="fill-current-color text-white hover:text-primary transition ease-in ml-2"
               />
             </a>
 
@@ -114,7 +108,7 @@ const Navbar = (): JSX.Element => {
               className="block lg:hidden z-20 cursor-pointer transition ease-in"
               onClick={toggleNav}
             >
-              <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-orange-dark transition ease-in" />
+              <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-primary transition ease-in" />
               <div
                 id="mobile-nav"
                 className="fixed top-16 right-0 flex flex-col bg-black-normal px-4 py-4 rounded-sm transition duration-300 ease"
@@ -123,7 +117,7 @@ const Navbar = (): JSX.Element => {
                   return (
                     <div
                       key={index}
-                      className={`flex lg:hidden font-medium text-white text-lg hover:text-orange-dark cursor-pointer transition ease-in my-2 mx-3`}
+                      className={`flex lg:hidden font-medium text-white text-lg hover:text-primary cursor-pointer transition ease-in my-2 mx-3`}
                     >
                       {menuItem.download ? (
                         <a href={menuItem.path} download>

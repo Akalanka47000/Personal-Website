@@ -25,11 +25,11 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: #ff4000;
+  background-color: #b81912;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background-color: #e63a00;
+  background-color: #d01d15;
 }
 
 body {

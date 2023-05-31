@@ -33,7 +33,7 @@ const Achievements = (): JSX.Element => {
           return (
             <div  key={index} className="flex flex-col w-[50vw] sm:w-[40vw] md:w-[17vw] items-center"  data-aos={index % 2 == 0 ? 'fade-right' : 'fade-left'}>
                 <img src="/achievements/logo.png" className="opacity-90 saturate-[10%] brightness-125"></img>
-                <div className="font-bold text-4xl text-center text-orange-dark blink cursor-default transition ease-in">
+                <div className="font-bold text-4xl text-center text-primary blink cursor-default transition ease-in">
                   {achievement.title}
                 </div>
                 <div className="font-bold text-lg md:text-xl xl:text-2xl text-white text-center mt-6 cursor-default transition ease-in">
