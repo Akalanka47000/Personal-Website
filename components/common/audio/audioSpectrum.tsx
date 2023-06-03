@@ -9,7 +9,7 @@ const Spectrum = (): JSX.Element => {
           height={150}
           width={screen.width}
           audioId={'audio-element'}
-          capColor={'#ff4000'}
+          capColor={'#b81912'}
           capHeight={6}
           meterWidth={3}
           meterCount={1000}

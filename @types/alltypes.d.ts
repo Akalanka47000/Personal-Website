@@ -1,3 +1,3 @@
-declare module 'react-audio-spectrum';
-declare module 'react-scroll';
-declare module '@emotion/react';
+declare module 'react-audio-spectrum'
+declare module 'react-scroll'
+declare module '@emotion/react'

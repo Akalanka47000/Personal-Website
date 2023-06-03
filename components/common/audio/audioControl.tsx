@@ -23,15 +23,9 @@ const AudioControl = (): JSX.Element => {
         onClick={toggleAudio}
       >
         {playing ? (
-          <CgPlayPause
-            size={53}
-            className="fill-current-color transform absolute md:scale-110"
-          />
+          <CgPlayPause size={53} className="fill-current-color transform absolute md:scale-110" />
         ) : (
-          <MdPlayArrow
-            size={44}
-            className="fill-current-color transform absolute md:scale-110"
-          />
+          <MdPlayArrow size={44} className="fill-current-color transform absolute md:scale-110" />
         )}
       </div>
       <audio id="audio-element" src="/audio/music.mp3" loop></audio>

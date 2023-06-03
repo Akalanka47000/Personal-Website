@@ -37,9 +37,7 @@ const Footer = (): JSX.Element => {
             </Link>
           </div>
           <div className="text-white mt-4">Connect with me</div>
-          <div className="text-white mt-2">
-            © {new Date().getFullYear()} Akalanka Perera
-          </div>
+          <div className="text-white mt-2">© {new Date().getFullYear()} Akalanka Perera</div>
         </div>
       </div>
       <Spectrum />

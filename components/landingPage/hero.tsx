@@ -13,16 +13,11 @@ const Hero = (): JSX.Element => {
         />
         <div className="flex flex-col justify-center items-end lg:items-start text-right lg:text-left mt-20 mb-12 lg:mt-0 lg:mb-0 mx-12 md:mx-32">
           <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white cursor-default transition ease-in">
-            Hi, I&apos;m{' '}
-            <span className="text-primary blink">Akalanka Perera</span>
+            Hi, I&apos;m <span className="text-primary blink">Akalanka Perera</span>
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-primary mt-6 cursor-default transition ease-in">
-            I&apos;m a{' '}
-            {Math.floor(
-              (Date.now() - new Date('2002-06-06T18:00:00.000Z').getTime()) /
-                31536000000
-            )}{' '}
-            year old full-stack engineer from Sri Lanka
+            I&apos;m a {Math.floor((Date.now() - new Date('2002-06-06T18:00:00.000Z').getTime()) / 31536000000)} year
+            old full-stack engineer from Sri Lanka
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-primary mt-6 cursor-default transition ease-in">
             Right now I&apos;m probably hunting bugs

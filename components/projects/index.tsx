@@ -13,9 +13,7 @@ const ProjectCarousel = (): JSX.Element => {
       >
         Projects
       </div>
-      <div
-        className="flex items-center justify-center flex-col mb-32 2xl:mb-12"
-      >
+      <div className="flex items-center justify-center flex-col mb-32 2xl:mb-12">
         <Carousel
           className="shadow-xl hover:shadow-2xl transition ease-in duration-200 w-full"
           showThumbs={false}

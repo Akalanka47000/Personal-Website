@@ -2,14 +2,11 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "no-eval": "error",
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "no-unused-expressions": "error",
     "semi": ["error", "never"],
     "semi-style": ["error", "last"],
     "@next/next/no-img-element": "off",
-    "react/jsx-no-target-blank": [false]
+    "react/jsx-no-target-blank": 0
   }
 }

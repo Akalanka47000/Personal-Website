@@ -1,5 +1,5 @@
 interface UIState {
-    skills: {
-        hoveredCard: string
-    }
+  skills: {
+    hoveredCard: string
+  }
 }

@@ -68,7 +68,7 @@ const Navbar = (): JSX.Element => {
             <NavbarLogo />
           </div>
           <div className="font-medium text-xl text-white hover:text-primary ml-4 cursor-default transition ease-in">
-            Programmer's Log
+            Programmer&apos;s Log
           </div>
         </div>
 
@@ -94,20 +94,14 @@ const Navbar = (): JSX.Element => {
                 </div>
               )
             })}
-            <a
-              href="https://github.com/Akalanka47000/akalanka47000.github.io"
-              target="_blank"
-            >
+            <a href="https://github.com/Akalanka47000/akalanka47000.github.io" target="_blank">
               <DiGithubAlt
                 size={35}
                 className="fill-current-color text-white hover:text-primary transition ease-in ml-2"
               />
             </a>
 
-            <li
-              className="block lg:hidden z-20 cursor-pointer transition ease-in"
-              onClick={toggleNav}
-            >
+            <li className="block lg:hidden z-20 cursor-pointer transition ease-in" onClick={toggleNav}>
               <HiMenuAlt2 className="h-8 w-8 ml-3 text-white hover:text-primary transition ease-in" />
               <div
                 id="mobile-nav"
@@ -124,12 +118,7 @@ const Navbar = (): JSX.Element => {
                           {menuItem.name}
                         </a>
                       ) : (
-                        <Link
-                          to={menuItem.path}
-                          spy={true}
-                          smooth={true}
-                          onClick={toggleNav}
-                        >
+                        <Link to={menuItem.path} spy={true} smooth={true} onClick={toggleNav}>
                           {menuItem.name}
                         </Link>
                       )}

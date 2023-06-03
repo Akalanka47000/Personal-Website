@@ -27,12 +27,7 @@ const LoadingScreen = (): JSX.Element => {
         <NavbarLogo />
       </div>
       <div className="sweet-loading w-[45vw] md:w-[20vw]">
-        <BarLoader
-          color={'#ff4000'}
-          loading={true}
-          css={override}
-          width={'100%'}
-        />
+        <BarLoader color={'#b81912'} loading={true} css={override} width={'100%'} />
       </div>
     </div>
   )

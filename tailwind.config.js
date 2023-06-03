@@ -7,7 +7,7 @@ module.exports = {
         3: '3px',
       },
       colors: {
-        primary: "#b81912",
+        primary: '#b81912',
         black: {
           normal: '#000000',
           'see-through': 'rgb(0, 0, 0, 0.3)',
@@ -36,9 +36,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: { 
+    extend: {
       brightness: ['hover', 'focus'],
-      height: ['group-hover'], 
+      height: ['group-hover'],
     },
   },
   plugins: [],

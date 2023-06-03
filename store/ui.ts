@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   skills: {
     hoveredCard: null,
-  }
+  },
 }
 
 export const uiSlice = createSlice({
@@ -12,7 +12,7 @@ export const uiSlice = createSlice({
   reducers: {
     setHoveredCard(state, action) {
       state.skills.hoveredCard = action.payload
-    }  
+    },
   },
 })
 

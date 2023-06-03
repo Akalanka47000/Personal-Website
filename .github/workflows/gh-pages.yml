@@ -2,7 +2,7 @@ name: Github Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
         run: npm install -g pnpm@7
 
       - name: Install project
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
       - name: Build project
         run: CI=false pnpm next build && pnpm next export
@@ -31,5 +31,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-
-
