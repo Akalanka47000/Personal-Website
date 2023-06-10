@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import ApplicationState from '@appstate'
 import SkillCard from './skillCard'
-import useEffectOnce from '../../hooks/useEffectOnce'
+import { useEffectOnce, useResponsive } from '../../hooks'
 import { desktopSkills, mobileSkills, Skill } from './data'
-import { useResponsive } from '../../hooks/useResponsive'
 
 const Skills = (): JSX.Element => {
   const { hoveredCard } = useSelector((state: ApplicationState) => state.ui.skills)

@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import BarLoader from 'react-spinners/BarLoader'
 import NavbarLogo from '../layout/navbar/logo'
+import { useEffectOnce } from '../../hooks'
 
 const override = css`
   display: block;
@@ -8,16 +9,19 @@ const override = css`
   border-color: red;
 `
 
-const LoadingScreen = (): JSX.Element => {
-  if (process.browser) {
-    const loader = document.getElementById('loader')
-    if (loader) {
-      setTimeout(() => {
-        loader.style.opacity = '0'
-        loader.style.pointerEvents = 'none'
-      }, 3000)
+const Loader = (): JSX.Element => {
+  useEffectOnce(() => {
+    if (process.browser) {
+      const loader = document.getElementById('loader')
+      if (loader) {
+        setTimeout(() => {
+          loader.style.opacity = '0'
+          loader.style.pointerEvents = 'none'
+        }, 3000)
+      }
     }
-  }
+  })
+
   return (
     <div
       id="loader"
@@ -33,4 +37,4 @@ const LoadingScreen = (): JSX.Element => {
   )
 }
 
-export default LoadingScreen
+export default Loader

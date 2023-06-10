@@ -57,6 +57,31 @@ const Navbar = (): JSX.Element => {
     },
   ]
 
+  const menuItemList = (mobile: boolean = false) => {
+    return menuItems?.map((menuItem, index) => {
+      return (
+        <div
+          key={index}
+          className={`${
+            mobile
+              ? `flex lg:hidden text-white text-lg my-2`
+              : `hidden lg:flex ${index == 0 ? 'text-primary text-xl' : 'text-white text-lg'}`
+          } hover:text-primary font-medium mx-3 cursor-pointer transition ease-in`}
+        >
+          {menuItem.download ? (
+            <a href={menuItem.path} download={menuItem.download}>
+              {menuItem.name}
+            </a>
+          ) : (
+            <Link to={menuItem.path} spy={true} smooth={true} onClick={mobile ? toggleNav : () => {}}>
+              {menuItem.name}
+            </Link>
+          )}
+        </div>
+      )
+    })
+  }
+
   return (
     <header
       id="about-section"
@@ -74,26 +99,7 @@ const Navbar = (): JSX.Element => {
 
         <nav className="absolute right-5">
           <ul className="flex items-center ">
-            {menuItems?.map((menuItem, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`hidden lg:flex font-medium  ${
-                    index == 0 ? 'text-primary text-xl' : 'text-white text-lg'
-                  } hover:text-primary cursor-pointer transition ease-in mx-3`}
-                >
-                  {menuItem.download ? (
-                    <a href={menuItem.path} download>
-                      {menuItem.name}
-                    </a>
-                  ) : (
-                    <Link to={menuItem.path} spy={true} smooth={true}>
-                      {menuItem.name}
-                    </Link>
-                  )}
-                </div>
-              )
-            })}
+            {menuItemList()}
             <a href="https://github.com/Akalanka47000/akalanka47000.github.io" target="_blank">
               <DiGithubAlt
                 size={35}
@@ -107,24 +113,7 @@ const Navbar = (): JSX.Element => {
                 id="mobile-nav"
                 className="fixed top-16 right-0 flex flex-col bg-black-normal px-4 py-4 rounded-sm transition duration-300 ease"
               >
-                {menuItems?.map((menuItem, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={`flex lg:hidden font-medium text-white text-lg hover:text-primary cursor-pointer transition ease-in my-2 mx-3`}
-                    >
-                      {menuItem.download ? (
-                        <a href={menuItem.path} download={menuItem.download}>
-                          {menuItem.name}
-                        </a>
-                      ) : (
-                        <Link to={menuItem.path} spy={true} smooth={true} onClick={toggleNav}>
-                          {menuItem.name}
-                        </Link>
-                      )}
-                    </div>
-                  )
-                })}
+                {menuItemList(true)}
               </div>
             </li>
           </ul>

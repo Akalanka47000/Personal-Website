@@ -1,14 +1,17 @@
-import React from 'react'
+import { useEffectOnce } from '../../hooks'
 
 const Background = (): JSX.Element => {
-  if (process.browser) {
-    setTimeout(() => {
-      const bgVideo = document.getElementById('bgVideo') as HTMLVideoElement
-      if (bgVideo) {
-        bgVideo.play()
-      }
-    }, 4000)
-  }
+  useEffectOnce(() => {
+    if (process.browser) {
+      setTimeout(() => {
+        const bgVideo = document.getElementById('bgVideo') as HTMLVideoElement
+        if (bgVideo) {
+          bgVideo.play()
+        }
+      }, 4000)
+    }
+  })
+
   return (
     <>
       <div className="w-full h-full fixed bg-fixed bg-black-normal z-0"></div>
