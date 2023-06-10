@@ -53,7 +53,7 @@ const Navbar = (): JSX.Element => {
     {
       name: 'Resume',
       path: '/resume.pdf',
-      download: true,
+      download: "Akalanka Perera's Resume",
     },
   ]
 
@@ -114,7 +114,7 @@ const Navbar = (): JSX.Element => {
                       className={`flex lg:hidden font-medium text-white text-lg hover:text-primary cursor-pointer transition ease-in my-2 mx-3`}
                     >
                       {menuItem.download ? (
-                        <a href={menuItem.path} download>
+                        <a href={menuItem.path} download={menuItem.download}>
                           {menuItem.name}
                         </a>
                       ) : (

@@ -6,7 +6,7 @@ const initialState = {
   },
 }
 
-export const uiSlice = createSlice({
+export const slice = createSlice({
   name: 'ui',
   initialState,
   reducers: {
@@ -16,6 +16,6 @@ export const uiSlice = createSlice({
   },
 })
 
-export const { setHoveredCard } = uiSlice.actions
+export const { setHoveredCard } = slice.actions
 
-export default uiSlice.reducer
+export default slice.reducer
