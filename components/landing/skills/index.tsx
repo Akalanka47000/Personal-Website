@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import ApplicationState from '@appstate'
-import SkillCard from './skillCard'
-import { useEffectOnce, useResponsive } from '../../hooks'
-import { desktopSkills, mobileSkills, Skill } from './data'
+import { useEffectOnce, useResponsive } from '@/hooks'
+import { default as ApplicationState } from '@appstate'
+import SkillCard from './card'
+import { Skill, desktopSkills, mobileSkills } from './data'
 
 const Skills = (): JSX.Element => {
   const { hoveredCard } = useSelector((state: ApplicationState) => state.ui.skills)
@@ -34,6 +34,7 @@ const Skills = (): JSX.Element => {
 
   useEffect(() => {
     if (process.browser) {
+      console.log(234, hoveredCard, scrollPosition)
       cleanGrid()
       if (hoveredCard && !mobile) {
         const centerElement = document.getElementById(hoveredCard)

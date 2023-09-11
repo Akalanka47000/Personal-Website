@@ -19,10 +19,22 @@ const base: Skill[] = [
     link: 'https://flutter.dev/',
   },
   {
+    name: 'React Native',
+    image: 'react',
+    logoWidth: '63%',
+    link: 'https://reactnative.dev/',
+  },
+  {
     name: 'VueJS',
     image: 'vue',
     logoWidth: '60%',
     link: 'https://vuejs.org/',
+  },
+  {
+    name: 'Svelte',
+    image: 'svelte',
+    logoWidth: '49%',
+    link: 'https://svelte.dev/',
   },
   {
     name: 'Angular',
@@ -49,12 +61,6 @@ const base: Skill[] = [
     link: 'https://nestjs.com/',
   },
   {
-    name: 'Spring',
-    image: 'spring',
-    logoWidth: '75%',
-    link: 'https://spring.io',
-  },
-  {
     name: 'MongoDB',
     image: 'mongo',
     logoWidth: '73%',
@@ -67,10 +73,10 @@ const base: Skill[] = [
     link: 'https://www.mysql.com/',
   },
   {
-    name: 'Firebase',
-    image: 'firebase',
-    logoWidth: '58%',
-    link: 'https://firebase.google.com/',
+    name: 'GitHub Actions',
+    image: 'actions',
+    logoWidth: '51%',
+    link: 'https://github.com/features/actions',
   },
   {
     name: 'Gitlab',
@@ -84,21 +90,15 @@ const base: Skill[] = [
     logoWidth: '55%',
     link: 'https://kubernetes.io/',
   },
-  {
-    name: 'Azure',
-    image: 'azure',
-    logoWidth: '55%',
-    link: 'https://azure.microsoft.com/en-us',
-  },
 ]
 
 export const desktopSkills: Skill[] = [
   ...base,
   {
-    name: 'After Effects',
-    image: 'AE',
-    logoWidth: '62%',
-    link: 'https://www.adobe.com/products/aftereffects.html',
+    name: 'Azure',
+    image: 'azure',
+    logoWidth: '55%',
+    link: 'https://azure.microsoft.com/en-us',
   },
 ]
 
@@ -111,9 +111,9 @@ export const mobileSkills: Skill[] = [
     link: 'https://www.docker.com/',
   },
   {
-    name: 'After Effects',
-    image: 'AE',
-    logoWidth: '62%',
-    link: 'https://www.adobe.com/products/aftereffects.html',
+    name: 'Azure',
+    image: 'azure',
+    logoWidth: '55%',
+    link: 'https://azure.microsoft.com/en-us',
   },
 ]

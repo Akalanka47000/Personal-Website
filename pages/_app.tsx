@@ -1,13 +1,11 @@
-import type { AppProps } from 'next/app'
 import { useEffect } from 'react'
 import { Provider } from 'react-redux'
-import Aos from 'aos'
-import Layout from '../components/layout'
-import store from '../store'
-import 'tailwindcss/tailwind.css'
+import type { AppProps } from 'next/app'
+import { default as Aos } from 'aos'
 import 'aos/dist/aos.css'
-import '../styles/globals.css'
-import '../styles/animations.css'
+import Layout from '@/components/layout'
+import store from '@/store'
+import '@/styles/index.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {

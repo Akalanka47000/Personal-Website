@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
-import BarLoader from 'react-spinners/BarLoader'
-import NavbarLogo from '../layout/navbar/logo'
-import { useEffectOnce } from '../../hooks'
+import { default as BarLoader } from 'react-spinners/BarLoader'
+import { useEffectOnce } from '@/hooks'
+import { default as NavbarLogo } from '../layout/navbar/logo'
 
 const override = css`
   display: block;

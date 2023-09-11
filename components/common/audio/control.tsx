@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { MdPlayArrow } from 'react-icons/md'
 import { CgPlayPause } from 'react-icons/cg'
+import { MdPlayArrow } from 'react-icons/md'
 
 const AudioControl = (): JSX.Element => {
   const [playing, setPlaying] = useState(false)

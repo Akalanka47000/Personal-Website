@@ -14,7 +14,6 @@ const Project = ({ project }: props): JSX.Element => {
       >
         <img src={`/projects/${project.name}.png`} alt="project-image" className={` `} />
       </a>
-      <div className="w-1 h-80 bg-primary shadow-red-thicker hidden md:flex mr-14 lg:mr-20" data-aos="fade"></div>
       <div
         className="w-full flex flex-col justify-center items-center lg:items-start ml-0 xl:ml-28 mr-0 lg:mr-20"
         data-aos="fade-left"

@@ -1,6 +1,6 @@
+import { BiDumbbell } from 'react-icons/bi'
 import { FaLaptopCode } from 'react-icons/fa'
 import { IoGameController } from 'react-icons/io5'
-import { BiDumbbell } from 'react-icons/bi'
 
 const Hero = (): JSX.Element => {
   return (
@@ -9,7 +9,7 @@ const Hero = (): JSX.Element => {
         <img
           src="/home/self.png"
           alt=""
-          className="opacity-70 pointer-events-none h-auto w-11/12 sm:w-8/12 lg:w-[48%] mt-auto"
+          className="opacity-80 pointer-events-none h-auto w-11/12 sm:w-8/12 lg:w-[48%] mt-auto filter contrast-[1.15]"
         />
         <div className="flex flex-col justify-center items-end lg:items-start text-right lg:text-left mt-20 mb-12 lg:mt-0 lg:mb-0 mx-12 md:mx-32">
           <div className="font-bold text-5xl xl:text-6xl 2xl:text-7xl text-white cursor-default transition ease-in">
@@ -20,7 +20,7 @@ const Hero = (): JSX.Element => {
             old full-stack engineer from Sri Lanka
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-primary mt-6 cursor-default transition ease-in">
-            Right now I&apos;m probably hunting bugs
+            Right now I&apos;m probably doing what I do best
           </div>
           <div className="font-bold text-xl xl:text-2xl 2xl:text-3xl text-white hover:text-primary mt-6 cursor-default transition ease-in">
             My hobbies include

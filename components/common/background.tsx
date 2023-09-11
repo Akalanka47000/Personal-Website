@@ -1,4 +1,4 @@
-import { useEffectOnce } from '../../hooks'
+import { useEffectOnce } from '@/hooks'
 
 const Background = (): JSX.Element => {
   useEffectOnce(() => {

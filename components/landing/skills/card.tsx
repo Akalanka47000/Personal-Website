@@ -1,5 +1,7 @@
+import { memo } from 'react'
 import { useDispatch } from 'react-redux'
-import { setHoveredCard } from '../../store/ui'
+import { default as isEqual } from 'lodash/isEqual'
+import { setHoveredCard } from '@/store/ui'
 
 interface cardProps {
   index: number
@@ -14,18 +16,26 @@ const SkillCard = ({ index, name, logo, width, link }: cardProps): JSX.Element =
 
   const id = `skill-card-${index}`
 
-  const onMouseOver = () => {
+  const onMouseEnter = () => {
     dispatch(setHoveredCard(id))
   }
 
-  const onMouseOut = () => {
+  const onMouseLeave = () => {
+    console.log('out')
     dispatch(setHoveredCard(null))
   }
 
   const borderStyle = 'border-gray-400 transform scale-110 absolute z-0'
   return (
-    <a id={id} href={link} target="_blank" className="skill-card" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
-      <div className="w-[33vw] h-[33vw] md:w-[20vw] md:h-[20vw] xl:w-[14vw] xl:h-[14vw] rounded-2xl cursor-pointer group relative transform hover:scale-105 transition ease-in">
+    <a
+      id={id}
+      href={link}
+      target="_blank"
+      className="skill-card"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div className="w-[33vw] h-[33vw] md:w-[20vw] md:h-[20vw] xl:w-[14vw] xl:h-[14vw] rounded-2xl cursor-pointer filter contrast-[1.05] group relative transform hover:scale-105 transition ease-in">
         <div className={`${borderStyle} border-t-4 top-0 left-0 h-full clipWidth`} />
         <div className={`${borderStyle} border-b-4 bottom-0 right-0 h-full clipWidth`} />
         <div className={`${borderStyle} border-l-4 bottom-0 w-full clipHeight`} />
@@ -42,4 +52,4 @@ const SkillCard = ({ index, name, logo, width, link }: cardProps): JSX.Element =
   )
 }
 
-export default SkillCard
+export default memo(SkillCard, (prevProps, currentProps) => isEqual(prevProps, currentProps))

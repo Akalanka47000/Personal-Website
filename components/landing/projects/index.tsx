@@ -1,7 +1,7 @@
 import { Carousel } from 'react-responsive-carousel'
-import Project from './project'
-import projects from './data'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import projects from './data'
+import Project from './project'
 
 const ProjectCarousel = (): JSX.Element => {
   return (

@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { FaGithubSquare } from 'react-icons/fa'
 import { SiHackerrank } from 'react-icons/si'
-import Spectrum from '../../common/audio/spectrum'
+import Link from 'next/link'
+import Spectrum from '@/components/common/audio/spectrum'
 
 const Footer = (): JSX.Element => {
   return (

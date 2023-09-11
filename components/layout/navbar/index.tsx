@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
-import { Link } from 'react-scroll'
-import { HiMenuAlt2 } from 'react-icons/hi'
+import { useEffect, useState } from 'react'
 import { DiGithubAlt } from 'react-icons/di'
+import { HiMenuAlt2 } from 'react-icons/hi'
+import { Link } from 'react-scroll'
 import NavbarLogo from './logo'
 
 const Navbar = (): JSX.Element => {

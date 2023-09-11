@@ -1,5 +1,9 @@
 import Head from 'next/head'
 
+export { default as Container } from './container'
+export { default as Footer } from './footer'
+export { default as Navbar } from './navbar'
+
 interface LayoutProps {
   children: React.ReactNode
   title: string
