@@ -1,4 +1,5 @@
 name: Github Pages
+run-name: Deploy to Github Pages
 
 on:
   push:
@@ -6,21 +7,25 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Node.js
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install Node.js 18 and setup dependency caching
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.x
+          cache: 'pnpm'
 
-      - name: Install PNPM
-        run: npm install -g pnpm@7
-
-      - name: Install project
-        run: pnpm install --ignore-scripts
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts --fix-lockfile
 
       - name: Build project
         run: CI=false pnpm next build && pnpm next export
